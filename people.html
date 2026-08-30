@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>People — Yao Lab | PolyU</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
+      <span class="logo">✦</span>
+      <span>Yao Lab<span class="sub">Mass Spectrometry &amp; Chemical Biology · PolyU</span></span>
+    </a>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="pi.html">PI</a>
+      <a href="research.html">Research</a>
+      <a href="people.html">People</a>
+      <a href="publications.html">Publications</a>
+      <a href="join.html">Join us</a>
+      <a href="portal.html">Research Portal</a>
+    </nav>
+  </div>
+</header>
+
+<section style="padding:48px 0">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">People</span>
+      <h2>Group members</h2>
+      <p>Postdoctoral fellows, PhD students and alumni of the Yao Lab.</p>
+    </div>
+    <h3 style="margin:20px 0 12px">Postdoctoral Fellows</h3>
+    <div class="grid g4" id="postdocs"></div>
+    <h3 style="margin:28px 0 12px">PhD Students</h3>
+    <div class="grid g4" id="phd"></div>
+    <h3 style="margin:28px 0 12px">Alumni</h3>
+    <div class="grid g4" id="alumni"></div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="col"><h4>Yao Lab</h4><p>Department of Applied Biology and Chemical Technology<br>The Hong Kong Polytechnic University</p></div>
+    <div class="col"><h4>Contact</h4><p>Prof. Zhongping Yao<br><a href="mailto:zhongping.yao@polyu.edu.hk">zhongping.yao@polyu.edu.hk</a></p></div>
+    <div class="col"><h4>Address</h4><p>Hung Hom, Kowloon, Hong Kong</p></div>
+  </div>
+  <div class="wrap" style="margin-top:18px;justify-content:flex-start"><p style="font-size:12px">© <span class="year"></span> Yao Lab · The Hong Kong Polytechnic University</p></div>
+</footer>
+<script src="assets/main.js"></script>
+<script>
+function initials(name){
+  const parts = name.trim().split(/\s+/);
+  return (parts[0]?parts[0][0]:'') + (parts[1]?parts[1][0]:'');
+}
+function personCard(p){
+  const av = p.photo ? '<img src="'+p.photo+'" alt="">' : initials(p.name);
+  const bio = p.bio ? '<p class="bio">'+p.bio+'</p>' : '';
+  let meta = '';
+  if(p.email) meta += '<a href="mailto:'+p.email+'">Email</a>';
+  if(p.link) meta += '<a href="'+p.link+'" target="_blank" rel="noopener">Profile</a>';
+  return '<div class="person"><div class="avatar">'+av+'</div><h3>'+p.prefix+' '+p.name+'</h3><div class="role">'+p.role+'</div>'+bio+(meta?'<div class="meta">'+meta+'</div>':'')+'</div>';
+}
+fetch('content/people.json').then(r=>r.json()).then(data=>{
+  document.getElementById('postdocs').innerHTML = data.postdocs.map(p=>personCard(Object.assign({},p,{role:'Postdoctoral Fellow'}))).join('');
+  document.getElementById('phd').innerHTML = data.phd.map(p=>personCard(Object.assign({},p,{role:'PhD Student'}))).join('');
+  document.getElementById('alumni').innerHTML = data.alumni.length ? data.alumni.map(p=>personCard(p)).join('') : '<p style="color:var(--muted)">Alumni to be added.</p>';
+}).catch(()=>{});
+</script>
+</body>
+</html>

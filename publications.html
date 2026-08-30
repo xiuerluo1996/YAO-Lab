@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Publications — Yao Lab | PolyU</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
+      <span class="logo">✦</span>
+      <span>Yao Lab<span class="sub">Mass Spectrometry &amp; Chemical Biology · PolyU</span></span>
+    </a>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="pi.html">PI</a>
+      <a href="research.html">Research</a>
+      <a href="people.html">People</a>
+      <a href="publications.html">Publications</a>
+      <a href="join.html">Join us</a>
+      <a href="portal.html">Research Portal</a>
+    </nav>
+  </div>
+</header>
+
+<section style="padding:48px 0">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Publications</span>
+      <h2>Selected recent publications</h2>
+      <p>Recent publications (2021–2026). For the complete list, see <a href="https://research.polyu.edu.hk/en/persons/zhongping-yao/publications/" target="_blank" rel="noopener">PolyU Research Portal</a> and Google Scholar.</p>
+    </div>
+    <div id="pubs"></div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="col"><h4>Yao Lab</h4><p>Department of Applied Biology and Chemical Technology<br>The Hong Kong Polytechnic University</p></div>
+    <div class="col"><h4>Contact</h4><p>Prof. Zhongping Yao<br><a href="mailto:zhongping.yao@polyu.edu.hk">zhongping.yao@polyu.edu.hk</a></p></div>
+    <div class="col"><h4>Address</h4><p>Hung Hom, Kowloon, Hong Kong</p></div>
+  </div>
+  <div class="wrap" style="margin-top:18px;justify-content:flex-start"><p style="font-size:12px">© <span class="year"></span> Yao Lab · The Hong Kong Polytechnic University</p></div>
+</footer>
+<script src="assets/main.js"></script>
+<script>
+fetch('content/publications.json').then(r=>r.json()).then(data=>{
+  const list = data.publications.slice().sort((a,b)=>b.year-a.year);
+  document.getElementById('pubs').innerHTML = list.map(p=>{
+    const link = p.link ? ' <a href="'+p.link+'" target="_blank" rel="noopener">[link]</a>' : '';
+    return '<div class="pub"><span class="yr">'+p.year+'</span><div class="title">'+p.title+link+'</div><div class="authors">'+p.authors+'</div><div class="j"><b>'+p.journal+'</b></div></div>';
+  }).join('');
+}).catch(()=>{});
+</script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+# Netlify configuration for the Yao Lab static site
+[build]
+  publish = "."
+
+# No build command is required: the site is plain static HTML/CSS/JS.

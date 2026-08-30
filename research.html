@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research — Yao Lab | PolyU</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
+      <span class="logo">✦</span>
+      <span>Yao Lab<span class="sub">Mass Spectrometry &amp; Chemical Biology · PolyU</span></span>
+    </a>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="pi.html">PI</a>
+      <a href="research.html">Research</a>
+      <a href="people.html">People</a>
+      <a href="publications.html">Publications</a>
+      <a href="join.html">Join us</a>
+      <a href="portal.html">Research Portal</a>
+    </nav>
+  </div>
+</header>
+
+<section style="padding:48px 0">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Research</span>
+      <h2>Our research directions</h2>
+      <p>We develop mass-spectrometry-based methods and apply them to fundamental and translational problems in chemistry, biology, medicine and food science.</p>
+    </div>
+    <div class="grid g2" id="topics"></div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="col"><h4>Yao Lab</h4><p>Department of Applied Biology and Chemical Technology<br>The Hong Kong Polytechnic University</p></div>
+    <div class="col"><h4>Contact</h4><p>Prof. Zhongping Yao<br><a href="mailto:zhongping.yao@polyu.edu.hk">zhongping.yao@polyu.edu.hk</a></p></div>
+    <div class="col"><h4>Address</h4><p>Hung Hom, Kowloon, Hong Kong</p></div>
+  </div>
+  <div class="wrap" style="margin-top:18px;justify-content:flex-start"><p style="font-size:12px">© <span class="year"></span> Yao Lab · The Hong Kong Polytechnic University</p></div>
+</footer>
+<script src="assets/main.js"></script>
+<script>
+const TOPICS = [
+  {img:"assets/img/molecular-data-storage.svg", t:"Molecular data storage", d:"We design unnatural proteins and peptides as carriers of digital information, encoding, storing and retrieving data by LC-MS/MS and de novo sequencing algorithms, with error-correction, random access and encryption."},
+  {img:"assets/img/protein-dynamics.svg", t:"Conformational dynamics of proteins & protein interactions", d:"Using native mass spectrometry, hydrogen/deuterium exchange MS (HDX-MS), ion mobility MS and molecular dynamics simulations, we study the structure, dynamics and interactions of proteins such as β-lactamases and SARS-CoV-2 proteins."},
+  {img:"assets/img/peptide-drug.svg", t:"Peptide drug discovery", d:"We advance de novo peptide sequencing by tandem mass spectrometry and discover bioactive peptides with therapeutic potential."},
+  {img:"assets/img/biomarker.svg", t:"Mechanistic study & biomarker discovery", d:"Mass-spectrometry-based multi-omics approaches reveal the molecular mechanisms of diseases and biological processes, and identify diagnostic and prognostic biomarkers."},
+  {img:"assets/img/molecular-assembly.svg", t:"Molecular assembly & recognition", d:"We investigate non-covalent molecular assembly, chiral recognition and host–guest interactions at the molecular level."},
+  {img:"assets/img/food-safety.svg", t:"Food safety", d:"We develop rapid MALDI-MS methods for authentication and quality analysis of foods, including edible oils, herbs and other high-value commodities."},
+  {img:"assets/img/analytical-techniques.svg", t:"New analytical techniques", d:"We create new ionization methods (e.g. wooden-tip ESI, substrate-based ionization) and novel MS workflows for direct, in situ and high-throughput analysis."}
+];
+document.getElementById('topics').innerHTML = TOPICS.map(x=>
+  '<div class="card"><div class="icon" style="height:200px"><img src="'+x.img+'" alt="'+x.t+'" style="width:100%;height:100%;object-fit:cover"></div><h3>'+x.t+'</h3><p>'+x.d+'</p></div>'
+).join('');
+</script>
+</body>
+</html>

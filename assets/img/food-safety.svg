@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Food safety">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1f2a"/><stop offset="1" stop-color="#123040"/>
+    </linearGradient>
+    <linearGradient id="d" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0aa8c9"/><stop offset="1" stop-color="#14a58c"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <g transform="translate(100,55)">
+    <path d="M0,-40 C40,-40 60,-10 60,20 C60,55 30,80 0,80 C-30,80 -60,55 -60,20 C-60,-10 -40,-40 0,-40 Z" fill="url(#d)" opacity="0.9"/>
+    <path d="M0,-28 C16,-28 24,-14 24,0 C24,20 12,32 0,32 C-12,32 -24,20 -24,0 C-24,-14 -16,-28 0,-28 Z" fill="#0b1f2a" opacity="0.25"/>
+  </g>
+  <g transform="translate(265,90)">
+    <path d="M0,-55 L50,-25 L50,25 L0,55 L-50,25 L-50,-25 Z" fill="none" stroke="#7fd8c4" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M-18,0 L-4,14 L20,-14" fill="none" stroke="#f2a93b" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="30" y="285" fill="#9fc6c0" font-size="13" font-family="sans-serif">Food safety</text>
+</svg>

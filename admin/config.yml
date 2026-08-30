@@ -1,0 +1,86 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/img"
+public_folder: "/assets/img"
+
+collections:
+  - name: "people"
+    label: "People"
+    files:
+      - name: "people"
+        label: "People"
+        file: "content/people.json"
+        format: json
+        fields:
+          - label: "Postdoctoral Fellows"
+            name: "postdocs"
+            widget: "list"
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "Prefix", name: "prefix", widget: "string", default: "Dr." }
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Bio", name: "bio", widget: "text", required: false }
+              - { label: "Email", name: "email", widget: "string", required: false }
+              - { label: "Profile link", name: "link", widget: "string", required: false }
+              - { label: "Photo", name: "photo", widget: "image", required: false }
+          - label: "PhD Students"
+            name: "phd"
+            widget: "list"
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "Prefix", name: "prefix", widget: "string", default: "Mr." }
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Bio", name: "bio", widget: "text", required: false }
+              - { label: "Email", name: "email", widget: "string", required: false }
+              - { label: "Profile link", name: "link", widget: "string", required: false }
+              - { label: "Photo", name: "photo", widget: "image", required: false }
+          - label: "Alumni"
+            name: "alumni"
+            widget: "list"
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "Prefix", name: "prefix", widget: "string", required: false }
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Role", name: "role", widget: "string", required: false }
+              - { label: "Bio", name: "bio", widget: "text", required: false }
+              - { label: "Email", name: "email", widget: "string", required: false }
+              - { label: "Profile link", name: "link", widget: "string", required: false }
+              - { label: "Photo", name: "photo", widget: "image", required: false }
+
+  - name: "publications"
+    label: "Publications"
+    files:
+      - name: "publications"
+        label: "Publications"
+        file: "content/publications.json"
+        format: json
+        fields:
+          - label: "Publications"
+            name: "publications"
+            widget: "list"
+            summary: "{{fields.year}} — {{fields.title}}"
+            fields:
+              - { label: "Year", name: "year", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Authors", name: "authors", widget: "string" }
+              - { label: "Journal", name: "journal", widget: "string" }
+              - { label: "Link (DOI/URL)", name: "link", widget: "string", required: false }
+
+  - name: "openings"
+    label: "Join us"
+    files:
+      - name: "openings"
+        label: "Openings"
+        file: "content/openings.json"
+        format: json
+        fields:
+          - { label: "Intro", name: "intro", widget: "text" }
+          - label: "Openings"
+            name: "openings"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }

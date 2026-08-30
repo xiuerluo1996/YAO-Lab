@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Protein conformational dynamics">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1f2a"/><stop offset="1" stop-color="#123040"/>
+    </linearGradient>
+    <linearGradient id="r1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#14a58c"/><stop offset="1" stop-color="#7fd8c4"/>
+    </linearGradient>
+    <linearGradient id="r2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0aa8c9"/><stop offset="1" stop-color="#4fd6e8"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <g fill="none" stroke-width="9" stroke-linecap="round" opacity="0.9">
+    <path d="M70 220 C60 120 150 60 200 90 C250 120 250 200 300 200" stroke="url(#r1)"/>
+    <path d="M200 90 C200 130 150 140 140 180 C132 215 160 240 200 235" stroke="url(#r2)" opacity="0.85"/>
+    <path d="M150 60 C180 50 210 60 220 90" stroke="url(#r2)" opacity="0.7"/>
+  </g>
+  <g fill="#f2a93b">
+    <circle cx="70" cy="220" r="6"/><circle cx="300" cy="200" r="6"/>
+  </g>
+  <g fill="#7fd8c4" font-family="sans-serif" font-size="15">
+    <text x="250" y="150">A</text><text x="320" y="120">B</text>
+  </g>
+  <path d="M250 170 L330 145" stroke="#7fd8c4" stroke-width="2" stroke-dasharray="5 5" fill="none"/>
+  <text x="30" y="285" fill="#9fc6c0" font-size="13" font-family="sans-serif">Conformational dynamics of proteins</text>
+</svg>

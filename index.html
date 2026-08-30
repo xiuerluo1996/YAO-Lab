@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yao Lab — Mass Spectrometry &amp; Chemical Biology | PolyU</title>
+<meta name="description" content="Research group of Prof. Zhongping Yao, Department of Applied Biology and Chemical Technology, The Hong Kong Polytechnic University.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
+      <span class="logo">✦</span>
+      <span>Yao Lab<span class="sub">Mass Spectrometry &amp; Chemical Biology · PolyU</span></span>
+    </a>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="pi.html">PI</a>
+      <a href="research.html">Research</a>
+      <a href="people.html">People</a>
+      <a href="publications.html">Publications</a>
+      <a href="join.html">Join us</a>
+      <a href="portal.html">Research Portal</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="sec-head" style="margin:0"><span class="kicker" style="color:#7fd8c4">The Hong Kong Polytechnic University · ABCT</span></p>
+    <h1>Decoding the molecular world with <span>mass spectrometry</span></h1>
+    <p>We develop new mass-spectrometry-based methods to study protein dynamics, store data in molecules, discover peptide drugs and biomarkers, and ensure food safety.</p>
+    <a class="btn" href="research.html">Explore our research</a>
+    <a class="btn ghost" href="join.html">Join the lab</a>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Research directions</span>
+      <h2>What we work on</h2>
+    </div>
+    <div class="grid g3" id="topics"></div>
+  </div>
+</section>
+
+<section style="background:#fff">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Representative work</span>
+      <h2>Selected highlights</h2>
+    </div>
+    <div class="grid g2">
+      <div class="card">
+        <h3>Protein-based digital data storage</h3>
+        <p>The first complete storage-to-retrieval cycle in de novo designed unnatural proteins, achieving ~30× density at 10% of the cost — published in <em>Nature Communications</em>.</p>
+      </div>
+      <div class="card">
+        <h3>Rapid edible-oil authentication</h3>
+        <p>MALDI-MS methods for fast, accurate classification and quantification of edible oils, screening adulterated and recycled ("gutter") oils.</p>
+      </div>
+      <div class="card">
+        <h3>Protein conformational dynamics</h3>
+        <p>Native MS, hydrogen/deuterium exchange MS and ion mobility MS to reveal the dynamics of β-lactamases, SARS-CoV-2 proteins and their interactions.</p>
+      </div>
+      <div class="card">
+        <h3>Ambient ionization techniques</h3>
+        <p>Pioneering wooden-tip electrospray ionization and other substrate-based ionization methods for direct, in situ analysis.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Contact</span>
+      <h2>Get in touch</h2>
+    </div>
+    <div class="grid g3">
+      <div class="card">
+        <h3>Principal Investigator</h3>
+        <p>Prof. Zhongping Yao<br>
+          Professor &amp; Associate Head<br>
+          <a href="mailto:zhongping.yao@polyu.edu.hk">zhongping.yao@polyu.edu.hk</a></p>
+      </div>
+      <div class="card">
+        <h3>Department</h3>
+        <p>Department of Applied Biology and Chemical Technology<br>The Hong Kong Polytechnic University</p>
+      </div>
+      <div class="card">
+        <h3>Address</h3>
+        <p>Hung Hom, Kowloon<br>Hong Kong</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="col">
+      <h4>Yao Lab</h4>
+      <p>Department of Applied Biology and Chemical Technology<br>The Hong Kong Polytechnic University</p>
+    </div>
+    <div class="col">
+      <h4>Contact</h4>
+      <p>Prof. Zhongping Yao<br><a href="mailto:zhongping.yao@polyu.edu.hk">zhongping.yao@polyu.edu.hk</a></p>
+    </div>
+    <div class="col">
+      <h4>Address</h4>
+      <p>Hung Hom, Kowloon, Hong Kong</p>
+    </div>
+  </div>
+  <div class="wrap" style="margin-top:18px;justify-content:flex-start"><p style="font-size:12px">© <span class="year"></span> Yao Lab · The Hong Kong Polytechnic University</p></div>
+</footer>
+
+<script src="assets/main.js"></script>
+<script>
+const TOPICS = [
+  {img:"assets/img/molecular-data-storage.svg", t:"Molecular data storage", d:"Designed proteins and peptides as digital data carriers, with encoding, storage and LC-MS/MS-based retrieval."},
+  {img:"assets/img/protein-dynamics.svg", t:"Protein conformational dynamics", d:"Native MS, HDX-MS and ion mobility MS to probe protein structure, dynamics and interactions."},
+  {img:"assets/img/peptide-drug.svg", t:"Peptide drug discovery", d:"De novo peptide sequencing and discovery of bioactive peptides as therapeutics."},
+  {img:"assets/img/biomarker.svg", t:"Mechanistic study & biomarker discovery", d:"MS-based multi-omics to reveal disease mechanisms and discover biomarkers."},
+  {img:"assets/img/molecular-assembly.svg", t:"Molecular assembly & recognition", d:"Non-covalent assembly, chiral recognition and host–guest interactions."},
+  {img:"assets/img/food-safety.svg", t:"Food safety", d:"Rapid authentication and quality analysis of foods by MALDI-MS."},
+  {img:"assets/img/analytical-techniques.svg", t:"New analytical techniques", d:"Ambient ionization and novel mass-spectrometry workflows for direct analysis."}
+];
+document.getElementById('topics').innerHTML = TOPICS.map(x=>
+  '<div class="card"><div class="icon"><img src="'+x.img+'" alt="'+x.t+'" style="width:100%;height:100%;object-fit:cover"></div><h3>'+x.t+'</h3><p>'+x.d+'</p></div>'
+).join('');
+</script>
+</body>
+</html>

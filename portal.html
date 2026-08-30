@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research Portal — Yao Lab | PolyU</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
+      <span class="logo">✦</span>
+      <span>Yao Lab<span class="sub">Mass Spectrometry &amp; Chemical Biology · PolyU</span></span>
+    </a>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="pi.html">PI</a>
+      <a href="research.html">Research</a>
+      <a href="people.html">People</a>
+      <a href="publications.html">Publications</a>
+      <a href="join.html">Join us</a>
+      <a href="portal.html">Research Portal</a>
+    </nav>
+  </div>
+</header>
+
+<section style="padding:48px 0">
+  <div class="wrap">
+
+    <!-- Gate: shown when logged out -->
+    <div class="gate" id="gate" style="display:none">
+      <div class="lock">🔒</div>
+      <h2>Members-only area</h2>
+      <p>The Research Portal contains internal protocols and resources for lab members.</p>
+      <p style="margin:16px 0">
+        <a class="btn" id="loginBtn" href="#">Sign in</a>
+      </p>
+      <p style="font-size:13px;color:var(--muted)">New members: access must be granted by the PI or a group administrator. Please contact <a href="mailto:zhongping.yao@polyu.edu.hk">Prof. Yao</a> to request an account.</p>
+    </div>
+
+    <!-- Protected content: shown when logged in -->
+    <div id="content" style="display:none">
+      <div class="sec-head">
+        <span class="kicker">Research Portal</span>
+        <h2>Protocols &amp; resources</h2>
+        <p>Internal protocols and shared resources for lab members.</p>
+      </div>
+      <p style="text-align:right"><a href="#" id="logoutBtn" style="color:var(--muted)">Sign out</a></p>
+
+      <div class="grid g2">
+        <div class="card">
+          <h3>Protocols</h3>
+          <p style="color:var(--muted)">Protocols will be added here. Please ask the group administrator to upload content.</p>
+        </div>
+        <div class="card">
+          <h3>Resources</h3>
+          <p style="color:var(--muted)">Shared documents, templates and datasets will appear here.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fallback: shown when Identity is not configured (e.g. local preview) -->
+    <div class="gate" id="fallback">
+      <div class="lock">🔌</div>
+      <h2>Authentication not configured</h2>
+      <p>This page requires <strong>Netlify Identity</strong>. Once the site is deployed to Netlify and Identity is enabled, lab members can sign in here.</p>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="col"><h4>Yao Lab</h4><p>Department of Applied Biology and Chemical Technology<br>The Hong Kong Polytechnic University</p></div>
+    <div class="col"><h4>Contact</h4><p>Prof. Zhongping Yao<br><a href="mailto:zhongping.yao@polyu.edu.hk">zhongping.yao@polyu.edu.hk</a></p></div>
+    <div class="col"><h4>Address</h4><p>Hung Hom, Kowloon, Hong Kong</p></div>
+  </div>
+  <div class="wrap" style="margin-top:18px;justify-content:flex-start"><p style="font-size:12px">© <span class="year"></span> Yao Lab · The Hong Kong Polytechnic University</p></div>
+</footer>
+<script src="assets/main.js"></script>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+(function () {
+  const gate = document.getElementById('gate');
+  const content = document.getElementById('content');
+  const fallback = document.getElementById('fallback');
+  const loginBtn = document.getElementById('loginBtn');
+  const logoutBtn = document.getElementById('logoutBtn');
+
+  function render() {
+    const user = window.netlifyIdentity && netlifyIdentity.currentUser();
+    if (user) {
+      gate.style.display = 'none';
+      fallback.style.display = 'none';
+      content.style.display = 'block';
+    } else {
+      content.style.display = 'none';
+      fallback.style.display = 'none';
+      gate.style.display = 'block';
+    }
+  }
+
+  if (window.netlifyIdentity) {
+    netlifyIdentity.init();
+    netlifyIdentity.on('init', render);
+    netlifyIdentity.on('login', render);
+    netlifyIdentity.on('logout', render);
+    loginBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      netlifyIdentity.open('login');
+    });
+    logoutBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      netlifyIdentity.logout();
+    });
+    // Show login gate once identity script confirms availability
+    render();
+  } else {
+    // Identity script failed to load (e.g. local preview) — fallback already visible.
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+{
+  "publications": [
+    {
+      "year": "2026",
+      "title": "Data storage and retrieval with unnatural proteins expressed via E. coli",
+      "authors": "Yao Z. P., et al.",
+      "journal": "Nature Communications",
+      "link": ""
+    },
+    {
+      "year": "2025",
+      "title": "Development of an integrated searching system for rapid and accurate classification of edible oils by matrix-assisted laser desorption/ionization mass spectrometry",
+      "authors": "Ma, Li, Li, Wu & Yao",
+      "journal": "Analytica Chimica Acta, 1381, 344804",
+      "link": ""
+    },
+    {
+      "year": "2024",
+      "title": "Quantitative Analysis of Blended Oils Based on Intensity Ratios of Marker Ions in MALDI-MS Spectra",
+      "authors": "Li, Lin, Ng & Yao",
+      "journal": "Journal of Agricultural and Food Chemistry, 72, 15376–15386",
+      "link": ""
+    },
+    {
+      "year": "2024",
+      "title": "Targeted Quantification of Glutathione/Arginine Redox Metabolism Based on a Novel Paired Mass Spectrometry Probe Approach for the Functional Assessment of Redox Status",
+      "authors": "Zhong, Ling & Yao",
+      "journal": "Analytical Chemistry",
+      "link": ""
+    },
+    {
+      "year": "2023",
+      "title": "Algorithms for de-novo sequencing of peptides by tandem mass spectrometry: A review",
+      "authors": "Ng, Zhou & Yao",
+      "journal": "Analytica Chimica Acta, 1268, 341330",
+      "link": ""
+    }
+  ]
+}
