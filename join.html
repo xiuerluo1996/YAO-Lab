@@ -61,5 +61,7 @@ fetch('content/openings.json').then(r=>r.json()).then(data=>{
     : '<div class="card"><p style="color:var(--muted)">No specific openings listed at the moment — please contact Prof. Yao directly.</p></div>';
 }).catch(()=>{});
 </script>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>if (window.netlifyIdentity) netlifyIdentity.init();</script>
 </body>
 </html>
