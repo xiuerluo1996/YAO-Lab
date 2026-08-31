@@ -4,6 +4,11 @@
       "category": "protocols",
       "title": "Agarose salt bridge",
       "file": "/assets/uploads/agarose-salt-bridges.pdf"
+    },
+    {
+      "category": "protocols",
+      "title": "SDS-PAGE gel preparation, running and staining",
+      "file": "/assets/uploads/sds-page-gel-preparation-running-and-staining.pdf"
     }
   ]
 }
