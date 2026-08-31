@@ -91,26 +91,44 @@
       if (!password) { showMsg('Please enter a password.'); return; }
       if (password.length < 6) { showMsg('Password must be at least 6 characters.'); return; }
       btn.disabled = true; btn.textContent = 'Saving…';
-      fetch('/.netlify/identity/verify', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ type: 'invite', token: token, password: password })
-      }).then(function (r) {
-        return r.json().then(function (j) { return { ok: r.ok, body: j }; });
-      }).then(function (res) {
-        if (res.ok) {
-          showMsg('Success! Redirecting to the editor…', true);
-          setTimeout(function () { window.location.href = '/admin/'; }, 1200);
-        } else {
-          var b = res.body || {};
-          var m = b.msg || b.error_description || b.error || b.message || 'Something went wrong. Please try again.';
-          showMsg(m);
+
+      // Netlify's GoTrue accepts invites via the "signup" type; try it first,
+      // and fall back to "invite" if the server doesn't recognize the type.
+      var types = ['signup', 'invite'];
+
+      function attempt(i) {
+        if (i >= types.length) {
+          showMsg('Something went wrong. Please try again.');
           btn.disabled = false; btn.textContent = 'Set password';
+          return;
         }
-      }).catch(function () {
-        showMsg('Network error. Please try again.');
-        btn.disabled = false; btn.textContent = 'Set password';
-      });
+        fetch('/.netlify/identity/verify', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ type: types[i], token: token, password: password })
+        }).then(function (r) {
+          return r.json().then(function (j) { return { ok: r.ok, body: j }; });
+        }).then(function (res) {
+          if (res.ok) {
+            showMsg('Success! Redirecting to the editor…', true);
+            setTimeout(function () { window.location.href = '/admin/'; }, 1200);
+          } else {
+            var b = res.body || {};
+            var m = b.msg || b.error_description || b.error || b.message || '';
+            if (m === 'Verify requires a verification type' && i + 1 < types.length) {
+              attempt(i + 1);
+            } else {
+              showMsg(m || 'Something went wrong. Please try again.');
+              btn.disabled = false; btn.textContent = 'Set password';
+            }
+          }
+        }).catch(function () {
+          showMsg('Network error. Please try again.');
+          btn.disabled = false; btn.textContent = 'Set password';
+        });
+      }
+
+      attempt(0);
     }
 
     btn.addEventListener('click', submit);
