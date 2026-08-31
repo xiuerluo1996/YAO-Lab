@@ -70,7 +70,6 @@ fetch('content/people.json').then(r=>r.json()).then(data=>{
   document.getElementById('alumni').innerHTML = data.alumni.length ? data.alumni.map(p=>personCard(p)).join('') : '<p style="color:var(--muted)">Alumni to be added.</p>';
 }).catch(()=>{});
 </script>
-<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-<script>if (window.netlifyIdentity) netlifyIdentity.init();</script>
+<script src="assets/identity.js"></script>
 </body>
 </html>
