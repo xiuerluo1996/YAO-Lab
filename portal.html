@@ -38,7 +38,7 @@
         <a class="btn" id="loginBtn" href="#">Sign in</a>
       </p>
       <p style="font-size:13px;color:var(--muted)">New here? <a href="#" id="requestToggle" style="color:var(--teal)">Request access</a> — a group administrator will review and approve your account.</p>
-      <form name="request-access" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="requestForm" style="display:none;text-align:left;margin-top:18px">
+      <form name="request-access" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="requestForm" hidden style="text-align:left;margin-top:18px">
         <input type="hidden" name="form-name" value="request-access">
         <input type="hidden" name="bot-field">
         <div class="field">
@@ -140,14 +140,14 @@
   if (toggle && form) {
     toggle.addEventListener('click', function (e) {
       e.preventDefault();
-      form.style.display = form.style.display === 'none' ? 'block' : 'none';
+      form.hidden = !form.hidden;
     });
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var btn = document.getElementById('reqSubmit');
       btn.disabled = true; btn.textContent = 'Sending…';
       var data = new URLSearchParams(new FormData(form)).toString();
-      fetch('/', {
+      fetch(window.location.pathname, {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: data
