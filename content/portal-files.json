@@ -1,3 +1,9 @@
 {
-  "files": []
+  "files": [
+    {
+      "category": "protocols",
+      "title": "Agarose salt bridge",
+      "file": "/assets/uploads/agarose-salt-bridges.pdf"
+    }
+  ]
 }
