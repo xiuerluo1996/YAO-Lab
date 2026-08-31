@@ -32,7 +32,9 @@ a:hover{color:var(--teal-2)}
 .nav-toggle{display:none;background:none;border:0;color:#fff;font-size:26px;cursor:pointer}
 
 /* Hero */
-.hero{position:relative;overflow:hidden;background:radial-gradient(1200px 500px at 80% -10%,#0aa8c9 0%,transparent 60%),radial-gradient(900px 500px at 10% 110%,#14a58c 0%,transparent 55%),var(--ink-2);color:#fff;padding:72px 0 60px}
+.hero{position:relative;overflow:hidden;background:var(--ink-2);color:#fff;padding:88px 0 76px}
+.hero-banner{position:absolute;inset:0;background:url('img/hero-banner.svg') center/cover no-repeat;pointer-events:none}
+.hero-banner::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,31,42,.95) 0%,rgba(11,31,42,.84) 38%,rgba(11,31,42,.42) 72%,rgba(11,31,42,.2) 100%)}
 .hero .wrap{position:relative;z-index:2}
 .hero h1{font-size:clamp(28px,4vw,44px);margin:0 0 12px;line-height:1.15;letter-spacing:.3px}
 .hero h1 span{background:linear-gradient(90deg,#7fd8c4,#4fd6e8);-webkit-background-clip:text;background-clip:text;color:transparent}
@@ -94,6 +96,16 @@ th{color:var(--muted);font-weight:600;font-size:12.5px;text-transform:uppercase;
 .gate .lock{font-size:46px;margin-bottom:10px}
 .gate h2{margin:0 0 8px}
 .gate p{color:var(--muted)}
+
+/* Portal files */
+.fsection{margin-bottom:26px}
+.fsection h3{font-size:17px;margin:0 0 12px;color:var(--ink)}
+.fsection .fen{color:var(--muted);font-weight:400;font-size:.85em}
+.fitem{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:12px 16px;border:1px solid var(--line);border-radius:10px;margin-bottom:8px;background:var(--card)}
+.fitem .ftitle{font-weight:600;color:var(--teal)}
+.fitem .fname{font-size:12px;color:var(--muted);background:#eef5f3;padding:2px 8px;border-radius:999px}
+.fitem .fdesc{width:100%;margin:4px 0 0;font-size:13px;color:var(--muted)}
+.fempty{color:var(--muted);font-size:13px}
 
 /* Footer */
 .site-footer{background:var(--ink);color:#9fc6c0;padding:40px 0;margin-top:40px}

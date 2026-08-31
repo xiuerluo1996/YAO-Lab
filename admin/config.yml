@@ -2,8 +2,8 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "assets/img"
-public_folder: "/assets/img"
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
 
 collections:
   - name: "people"
@@ -84,3 +84,30 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Description", name: "description", widget: "text" }
+
+  - name: "portal"
+    label: "Research Portal"
+    files:
+      - name: "portal_files"
+        label: "Portal files"
+        file: "content/portal-files.json"
+        format: json
+        fields:
+          - label: "Files"
+            name: "files"
+            widget: "list"
+            summary: "{{fields.category}} — {{fields.title}}"
+            fields:
+              - label: "Category"
+                name: "category"
+                widget: "select"
+                options:
+                  - { label: "Protocols 实验方案", value: "protocols" }
+                  - { label: "SOPs 标准流程", value: "sops" }
+                  - { label: "Datasets 数据集", value: "datasets" }
+                  - { label: "Templates 模板", value: "templates" }
+                  - { label: "Meeting 组会资料", value: "meeting" }
+                  - { label: "Theses 毕业论文", value: "theses" }
+              - { label: "Title", name: "title", widget: "string", required: true }
+              - { label: "File", name: "file", widget: "file", required: true }
+              - { label: "Description", name: "description", widget: "text", required: false }

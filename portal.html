@@ -37,7 +37,25 @@
       <p style="margin:16px 0">
         <a class="btn" id="loginBtn" href="#">Sign in</a>
       </p>
-      <p style="font-size:13px;color:var(--muted)">New members: access must be granted by the PI or a group administrator. Please contact <a href="mailto:zhongping.yao@polyu.edu.hk">Prof. Yao</a> to request an account.</p>
+      <p style="font-size:13px;color:var(--muted)">New here? <a href="#" id="requestToggle" style="color:var(--teal)">Request access</a> — a group administrator will review and approve your account.</p>
+      <form name="request-access" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="requestForm" style="display:none;text-align:left;margin-top:18px">
+        <input type="hidden" name="form-name" value="request-access">
+        <input type="hidden" name="bot-field">
+        <div class="field">
+          <label for="req-name">Your name</label>
+          <input type="text" id="req-name" name="name" placeholder="Full name" required>
+        </div>
+        <div class="field">
+          <label for="req-email">Your email</label>
+          <input type="email" id="req-email" name="email" placeholder="you@example.com" required>
+        </div>
+        <div class="field">
+          <label for="req-note">Which lab / role? (optional)</label>
+          <textarea id="req-note" name="note" placeholder="e.g. PhD student in Prof. Yao's group"></textarea>
+        </div>
+        <button class="btn" type="submit" id="reqSubmit" style="width:100%">Submit request</button>
+        <p id="reqMsg" style="font-size:13px;margin:10px 0 0;color:var(--teal)"></p>
+      </form>
     </div>
 
     <!-- Protected content: shown when logged in -->
@@ -49,16 +67,7 @@
       </div>
       <p style="text-align:right"><a href="#" id="logoutBtn" style="color:var(--muted)">Sign out</a></p>
 
-      <div class="grid g2">
-        <div class="card">
-          <h3>Protocols</h3>
-          <p style="color:var(--muted)">Protocols will be added here. Please ask the group administrator to upload content.</p>
-        </div>
-        <div class="card">
-          <h3>Resources</h3>
-          <p style="color:var(--muted)">Shared documents, templates and datasets will appear here.</p>
-        </div>
-      </div>
+      <div id="fileSections"></div>
     </div>
 
     <!-- Fallback: shown when Identity is not configured (e.g. local preview) -->
@@ -119,6 +128,73 @@
     render();
   } else {
     // Identity script failed to load (e.g. local preview) — fallback already visible.
+  }
+})();
+</script>
+<script>
+(function () {
+  // Request access form
+  var toggle = document.getElementById('requestToggle');
+  var form = document.getElementById('requestForm');
+  var msg = document.getElementById('reqMsg');
+  if (toggle && form) {
+    toggle.addEventListener('click', function (e) {
+      e.preventDefault();
+      form.style.display = form.style.display === 'none' ? 'block' : 'none';
+    });
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var btn = document.getElementById('reqSubmit');
+      btn.disabled = true; btn.textContent = 'Sending…';
+      var data = new URLSearchParams(new FormData(form)).toString();
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: data
+      }).then(function () {
+        msg.style.color = 'var(--teal)';
+        msg.textContent = 'Thank you! Your request has been sent. A group administrator will review it and invite you.';
+        form.reset();
+        btn.disabled = false; btn.textContent = 'Submit request';
+      }).catch(function () {
+        msg.style.color = '#b91c1c';
+        msg.textContent = 'Something went wrong. Please email Prof. Yao directly.';
+        btn.disabled = false; btn.textContent = 'Submit request';
+      });
+    });
+  }
+
+  // Portal files
+  var CATEGORIES = [
+    { key: 'protocols', zh: '实验方案', en: 'Protocols' },
+    { key: 'sops', zh: '标准流程', en: 'SOPs' },
+    { key: 'datasets', zh: '数据集', en: 'Datasets' },
+    { key: 'templates', zh: '模板', en: 'Templates' },
+    { key: 'meeting', zh: '组会资料', en: 'Meeting' },
+    { key: 'theses', zh: '毕业论文', en: 'Theses' }
+  ];
+  function esc(s) {
+    return String(s).replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
+  var box = document.getElementById('fileSections');
+  if (box) {
+    fetch('content/portal-files.json').then(function (r) { return r.json(); }).then(function (data) {
+      var files = (data && data.files) || [];
+      box.innerHTML = CATEGORIES.map(function (cat) {
+        var list = files.filter(function (f) { return f.category === cat.key; });
+        var items = list.length ? list.map(function (f) {
+          var name = (f.file || '').split('/').pop();
+          var desc = f.description ? '<p class="fdesc">' + esc(f.description) + '</p>' : '';
+          return '<div class="fitem">' +
+            '<a class="ftitle" href="' + esc(f.file) + '" target="_blank" rel="noopener">' + esc(f.title) + '</a>' +
+            (name ? '<span class="fname">' + esc(name) + '</span>' : '') +
+            desc + '</div>';
+        }).join('') : '<p class="fempty">No files yet.</p>';
+        return '<div class="fsection"><h3>' + cat.zh + ' <span class="fen">' + cat.en + '</span></h3>' + items + '</div>';
+      }).join('');
+    }).catch(function () {});
   }
 })();
 </script>
