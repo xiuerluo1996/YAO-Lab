@@ -139,5 +139,50 @@
       "photo": ""
     }
   ],
-  "alumni": []
+  "alumni": [
+    {
+      "prefix": "Dr.",
+      "name": "Suying Li"
+    },
+    {
+      "prefix": "Dr.",
+      "name": "Jianying Wang"
+    },
+    {
+      "prefix": "Dr. ",
+      "name": "Patrick Tse Fung Wong"
+    },
+    {
+      "prefix": "Dr.",
+      "name": "Qi Yi"
+    },
+    {
+      "prefix": "Dr. ",
+      "name": "Chengxi Liu"
+    },
+    {
+      "prefix": "Dr.",
+      "name": "Qinyu Jia"
+    },
+    {
+      "prefix": "Dr.",
+      "name": "Dong Zhang"
+    },
+    {
+      "prefix": "Dr.",
+      "name": "Dongqi Han"
+    },
+    {
+      "prefix": "Dr. ",
+      "name": "Eugene Zhan Yan Li"
+    },
+    {
+      "prefix": "Dr.",
+      "name": "Liwen Huang "
+    },
+    {
+      "prefix": "Dr.",
+      "name": "Bin Hu"
+    }
+  ]
 }
