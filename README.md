@@ -1,7 +1,7 @@
 # Yao Lab — Group Website
 
 English website for the research group of **Prof. Zhongping Yao (姚锺平)**,
-Department of Applied Biology and Chemical Technology (ABCT), The Hong Kong Polytechnic University.
+Department of Life Sciences, The Hong Kong Polytechnic University.
 
 ## Structure
 
