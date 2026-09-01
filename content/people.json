@@ -1,24 +1,143 @@
 {
   "postdocs": [
-    { "prefix": "Dr.", "name": "Weiwei Chen", "bio": "", "email": "", "link": "", "photo": "" },
-    { "prefix": "Dr.", "name": "Xuewei Lin", "bio": "", "email": "", "link": "", "photo": "" },
-    { "prefix": "Dr.", "name": "Chengyi Xie", "bio": "", "email": "", "link": "", "photo": "" },
-    { "prefix": "Dr.", "name": "Michael Ma", "bio": "", "email": "", "link": "", "photo": "" }
+    {
+      "prefix": "Dr.",
+      "name": "Weiwei Chen",
+      "bio": "",
+      "email": "",
+      "link": "",
+      "photo": ""
+    },
+    {
+      "prefix": "Dr.",
+      "name": "Xuewei Lin",
+      "bio": "",
+      "email": "",
+      "link": "",
+      "photo": ""
+    },
+    {
+      "prefix": "Dr.",
+      "name": "Chengyi Xie",
+      "bio": "",
+      "email": "",
+      "link": "",
+      "photo": ""
+    },
+    {
+      "prefix": "Dr.",
+      "name": "Michael Ma",
+      "bio": "",
+      "email": "",
+      "link": "",
+      "photo": ""
+    }
   ],
   "phd": [
-    { "prefix": "Mr.", "name": "Yin Zhou", "bio": "", "email": "", "link": "", "photo": "" },
-    { "prefix": "Mr.", "name": "Xiuer Luo", "bio": "", "email": "", "link": "", "photo": "" },
-    { "prefix": "Miss.", "name": "Elena Bolonova", "bio": "", "email": "", "link": "", "photo": "" },
-    { "prefix": "Miss.", "name": "Jessie Wu", "bio": "", "email": "", "link": "", "photo": "" },
-    { "prefix": "Mr.", "name": "Devin Chau", "bio": "", "email": "", "link": "", "photo": "" },
-    { "prefix": "Mr.", "name": "Biming Zhong", "bio": "", "email": "", "link": "", "photo": "" },
-    { "prefix": "Mr.", "name": "Zezhong Feng", "bio": "", "email": "", "link": "", "photo": "" },
-    { "prefix": "Miss.", "name": "Chang Zhao", "bio": "", "email": "", "link": "", "photo": "" },
-    { "prefix": "Miss.", "name": "Jiayu Lin", "bio": "", "email": "", "link": "", "photo": "" },
-    { "prefix": "Miss.", "name": "Haimei Shi", "bio": "", "email": "", "link": "", "photo": "" },
-    { "prefix": "Miss.", "name": "Feifan Shi", "bio": "", "email": "", "link": "", "photo": "" },
-    { "prefix": "Miss.", "name": "Chen Yuan", "bio": "", "email": "", "link": "", "photo": "" },
-    { "prefix": "Mr.", "name": "Yiwei Sang", "bio": "", "email": "", "link": "", "photo": "" }
+    {
+      "prefix": "Mr.",
+      "name": "Yin Zhou",
+      "bio": "",
+      "email": "",
+      "link": "",
+      "photo": ""
+    },
+    {
+      "prefix": "Mr.",
+      "name": "Xiuer Luo",
+      "bio": "",
+      "email": "",
+      "link": "",
+      "photo": ""
+    },
+    {
+      "prefix": "Miss.",
+      "name": "Elena Bolonova",
+      "bio": "",
+      "email": "",
+      "link": "",
+      "photo": ""
+    },
+    {
+      "prefix": "Miss.",
+      "name": "Jessie Wu",
+      "bio": "",
+      "email": "",
+      "link": "",
+      "photo": ""
+    },
+    {
+      "prefix": "Mr.",
+      "name": "Devin Chau",
+      "bio": "",
+      "email": "",
+      "link": "",
+      "photo": ""
+    },
+    {
+      "prefix": "Mr.",
+      "name": "Biming Zhong",
+      "bio": "",
+      "email": "",
+      "link": "",
+      "photo": ""
+    },
+    {
+      "prefix": "Mr.",
+      "name": "Zezhong Feng",
+      "bio": "",
+      "email": "",
+      "link": "",
+      "photo": ""
+    },
+    {
+      "prefix": "Miss.",
+      "name": "Chang Zhao",
+      "bio": "",
+      "email": "",
+      "link": "",
+      "photo": ""
+    },
+    {
+      "prefix": "Miss.",
+      "name": "Jiayu Lin",
+      "bio": "",
+      "email": "",
+      "link": "",
+      "photo": ""
+    },
+    {
+      "prefix": "Miss.",
+      "name": "Haimei Shi",
+      "bio": "",
+      "email": "",
+      "link": "",
+      "photo": ""
+    },
+    {
+      "prefix": "Miss.",
+      "name": "Feifan Shi",
+      "bio": "",
+      "email": "",
+      "link": "",
+      "photo": ""
+    },
+    {
+      "prefix": "Miss.",
+      "name": "Chen Yuan",
+      "bio": "",
+      "email": "",
+      "link": "",
+      "photo": ""
+    },
+    {
+      "prefix": "Mr.",
+      "name": "Yiwei Zeng",
+      "bio": "",
+      "email": "",
+      "link": "",
+      "photo": ""
+    }
   ],
   "alumni": []
 }
