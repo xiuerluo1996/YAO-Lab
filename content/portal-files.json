@@ -3,12 +3,37 @@
     {
       "category": "protocols",
       "title": "Agarose salt bridge",
-      "file": "/assets/uploads/agarose-salt-bridges.pdf"
+      "file": "/assets/uploads/agarose-salt-bridges-xiuer-luo.pdf"
     },
     {
       "category": "protocols",
       "title": "SDS-PAGE gel preparation, running and staining",
-      "file": "/assets/uploads/sds-page-gel-preparation-running-and-staining.pdf"
+      "file": "/assets/uploads/sds-page-gel-preparation-running-and-staining-xiuer-luo.pdf"
+    },
+    {
+      "category": "templates",
+      "file": "/assets/uploads/peptide-analyzer-template-xiuer-luo.opju",
+      "title": "Nanopore peptide sensing analyzer-Xiuer Luo"
+    },
+    {
+      "category": "templates",
+      "title": "Nanopore protein sensing analyzer-Xiuer Luo",
+      "file": "/assets/uploads/protein-analyzer-template-xiuer-luo.opju"
+    },
+    {
+      "category": "protocols",
+      "title": "Nanopore peptide sensing data analysis (scatter plot and fitting)-Xiuer Luo",
+      "file": "/assets/uploads/peptide-sensing-single-column-analysis-dwell-time-or-iex-statistic-xiuer-luo.pdf"
+    },
+    {
+      "category": "protocols",
+      "title": "Protocol ion selectivity calculation template",
+      "file": "/assets/uploads/protocol-ion-selectivity-calculation-template-xiuer-luo.xlsx"
+    },
+    {
+      "category": "protocols",
+      "title": "Ion selectivity measurement protocol",
+      "file": "/assets/uploads/ion-selectivity-measurement-protocol-from-adina-nature-nano-paper-xiuer-luo.pdf"
     }
   ]
 }
