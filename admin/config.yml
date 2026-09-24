@@ -14,6 +14,17 @@ collections:
         file: "content/people.json"
         format: json
         fields:
+          - label: "Research Assistant Professor"
+            name: "rap"
+            widget: "list"
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "Prefix", name: "prefix", widget: "string", default: "Dr." }
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Bio", name: "bio", widget: "text", required: false }
+              - { label: "Email", name: "email", widget: "string", required: false }
+              - { label: "Profile link", name: "link", widget: "string", required: false }
+              - { label: "Photo", name: "photo", widget: "image", required: false }
           - label: "Postdoctoral Fellows"
             name: "postdocs"
             widget: "list"
@@ -36,18 +47,33 @@ collections:
               - { label: "Email", name: "email", widget: "string", required: false }
               - { label: "Profile link", name: "link", widget: "string", required: false }
               - { label: "Photo", name: "photo", widget: "image", required: false }
+          - label: "Visiting Students"
+            name: "visiting"
+            widget: "list"
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "From (Institution)", name: "from", widget: "string", required: false }
+              - { label: "Period", name: "period", widget: "string", required: false }
+          - label: "Research Assistants"
+            name: "ra"
+            widget: "list"
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "Prefix", name: "prefix", widget: "string", default: "Mr." }
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Bio", name: "bio", widget: "text", required: false }
+              - { label: "Email", name: "email", widget: "string", required: false }
+              - { label: "Profile link", name: "link", widget: "string", required: false }
+              - { label: "Photo", name: "photo", widget: "image", required: false }
           - label: "Alumni"
             name: "alumni"
             widget: "list"
             summary: "{{fields.name}}"
             fields:
-              - { label: "Prefix", name: "prefix", widget: "string", required: false }
               - { label: "Name", name: "name", widget: "string" }
-              - { label: "Role", name: "role", widget: "string", required: false }
-              - { label: "Bio", name: "bio", widget: "text", required: false }
-              - { label: "Email", name: "email", widget: "string", required: false }
-              - { label: "Profile link", name: "link", widget: "string", required: false }
-              - { label: "Photo", name: "photo", widget: "image", required: false }
+              - { label: "Stay of period", name: "period", widget: "string", required: false }
+              - { label: "Current status", name: "status", widget: "string", required: false }
 
   - name: "publications"
     label: "Publications"

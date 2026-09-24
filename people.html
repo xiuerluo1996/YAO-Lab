@@ -31,14 +31,20 @@
     <div class="sec-head">
       <span class="kicker">People</span>
       <h2>Group members</h2>
-      <p>Postdoctoral fellows, PhD students and alumni of the Yao Lab.</p>
+      <p>Research Assistant Professors, postdoctoral fellows, students, research assistants and alumni of the Yao Lab.</p>
     </div>
-    <h3 style="margin:20px 0 12px">Postdoctoral Fellows</h3>
+    <h3 style="margin:20px 0 12px">Research Assistant Professor</h3>
+    <div class="grid g4" id="rap"></div>
+    <h3 style="margin:28px 0 12px">Postdoctoral Fellows</h3>
     <div class="grid g4" id="postdocs"></div>
     <h3 style="margin:28px 0 12px">PhD Students</h3>
     <div class="grid g4" id="phd"></div>
+    <h3 style="margin:28px 0 12px">Visiting Students</h3>
+    <div class="grid g4" id="visiting"></div>
+    <h3 style="margin:28px 0 12px">Research Assistants</h3>
+    <div class="grid g4" id="ra"></div>
     <h3 style="margin:28px 0 12px">Alumni</h3>
-    <div class="grid g4" id="alumni"></div>
+    <div id="alumni"></div>
   </div>
 </section>
 
@@ -53,21 +59,40 @@
 <script src="assets/main.js"></script>
 <script>
 function initials(name){
-  const parts = name.trim().split(/\s+/);
+  const parts = (name||'').trim().split(/\s+/);
   return (parts[0]?parts[0][0]:'') + (parts[1]?parts[1][0]:'');
 }
-function personCard(p){
-  const av = p.photo ? '<img src="'+p.photo+'" alt="">' : initials(p.name);
-  const bio = p.bio ? '<p class="bio">'+p.bio+'</p>' : '';
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+function personCard(p, role){
+  const name = (p.prefix ? p.prefix.trim() + ' ' : '') + (p.name||'').trim();
+  const av = p.photo ? '<img src="'+p.photo+'" alt="">' : initials(name);
+  const bio = p.bio ? '<p class="bio">'+esc(p.bio)+'</p>' : '';
   let meta = '';
-  if(p.email) meta += '<a href="mailto:'+p.email+'">Email</a>';
-  if(p.link) meta += '<a href="'+p.link+'" target="_blank" rel="noopener">Profile</a>';
-  return '<div class="person"><div class="avatar">'+av+'</div><h3>'+p.prefix+' '+p.name+'</h3><div class="role">'+p.role+'</div>'+bio+(meta?'<div class="meta">'+meta+'</div>':'')+'</div>';
+  if(p.email) meta += '<a href="mailto:'+esc(p.email)+'">Email</a>';
+  if(p.link) meta += '<a href="'+esc(p.link)+'" target="_blank" rel="noopener">Profile</a>';
+  return '<div class="person"><div class="avatar">'+av+'</div><h3>'+esc(name)+'</h3><div class="role">'+role+'</div>'+bio+(meta?'<div class="meta">'+meta+'</div>':'')+'</div>';
+}
+function visitingCard(p){
+  const name = (p.name||'').trim();
+  const from = p.from ? '<div class="role">'+esc(p.from)+'</div>' : '';
+  const period = p.period ? '<p class="bio">'+esc(p.period)+'</p>' : '';
+  return '<div class="person"><div class="avatar">'+initials(name)+'</div><h3>'+esc(name)+'</h3>'+from+period+'</div>';
+}
+function alumniTable(rows){
+  if(!rows || !rows.length) return '<p style="color:var(--muted)">Alumni to be added.</p>';
+  let h = '<table><thead><tr><th>Name</th><th>Stay of period</th><th>Current status</th></tr></thead><tbody>';
+  rows.forEach(a=>{ h += '<tr><td>'+esc(a.name)+'</td><td>'+esc(a.period)+'</td><td>'+esc(a.status)+'</td></tr>'; });
+  h += '</tbody></table>';
+  return h;
 }
 fetch('content/people.json').then(r=>r.json()).then(data=>{
-  document.getElementById('postdocs').innerHTML = data.postdocs.map(p=>personCard(Object.assign({},p,{role:'Postdoctoral Fellow'}))).join('');
-  document.getElementById('phd').innerHTML = data.phd.map(p=>personCard(Object.assign({},p,{role:'PhD Student'}))).join('');
-  document.getElementById('alumni').innerHTML = data.alumni.length ? data.alumni.map(p=>personCard(p)).join('') : '<p style="color:var(--muted)">Alumni to be added.</p>';
+  const empty = '<p style="color:var(--muted)">To be added.</p>';
+  document.getElementById('rap').innerHTML = (data.rap && data.rap.length) ? data.rap.map(p=>personCard(p,'Research Assistant Professor')).join('') : empty;
+  document.getElementById('postdocs').innerHTML = (data.postdocs||[]).map(p=>personCard(p,'Postdoctoral Fellow')).join('');
+  document.getElementById('phd').innerHTML = (data.phd||[]).map(p=>personCard(p,'PhD Student')).join('');
+  document.getElementById('visiting').innerHTML = (data.visiting && data.visiting.length) ? data.visiting.map(visitingCard).join('') : empty;
+  document.getElementById('ra').innerHTML = (data.ra && data.ra.length) ? data.ra.map(p=>personCard(p,'Research Assistant')).join('') : empty;
+  document.getElementById('alumni').innerHTML = alumniTable(data.alumni);
 }).catch(()=>{});
 </script>
 <script src="assets/identity.js"></script>
