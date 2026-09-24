@@ -10,19 +10,19 @@
     },
     {
       "prefix": "Dr.",
-      "name": "Xuewei Lin",
-      "bio": "",
+      "name": "Xuewei Lin (2019.08—now)",
+      "bio": "LIN Xuewei obtained a Bachelor of Engineering degree from Zhejiang University and a Doctor of Philosophy from The Hong Kong Polytechnic University. Her research interests lie in the development of mass spectrometry-based approaches for applications in food safety, chiral recognition, and metal affinity.",
       "email": "",
       "link": "",
-      "photo": ""
+      "photo": "/assets/uploads/lin-xuewei.jpg"
     },
     {
       "prefix": "Dr.",
-      "name": "Chengyi Xie",
-      "bio": "",
+      "name": "Chengyi Xie (2025.11—now)",
+      "bio": "I'm graduated from Hong Kong Baptist University.\nMy current research interest is high resolution mass spectrometry imaging. ",
       "email": "",
       "link": "",
-      "photo": ""
+      "photo": "/assets/uploads/xie-chengyi.jpg"
     },
     {
       "prefix": "Dr.",
@@ -36,11 +36,11 @@
   "phd": [
     {
       "prefix": "Mr.",
-      "name": "Yin Zhou",
-      "bio": "",
+      "name": "Yin Zhou (2020.09—now)",
+      "bio": "Yin Zhou obtained his BA degree in 2020 with a major in ecology and evolutionary biology and minor in computer science from the University of Colorado Boulder. He is now a PhD student in the Hong Kong Polytechnic University and focus on the topic of data storage using biomolecules. ",
       "email": "",
       "link": "",
-      "photo": ""
+      "photo": "/assets/uploads/zhouyin.jpg"
     },
     {
       "prefix": "Mr.",
@@ -150,7 +150,8 @@
     },
     {
       "prefix": "Dr. ",
-      "name": "Patrick Tse Fung Wong"
+      "name": "Patrick Tse Fung Wong (2016.12—2026.07）",
+      "role": "Scientific Officer, The Hong Kong Polytechnic University"
     },
     {
       "prefix": "Dr.",
@@ -174,7 +175,8 @@
     },
     {
       "prefix": "Dr. ",
-      "name": "Eugene Zhen Yan Li"
+      "name": "Eugene Zhen Yan Li (2016.12—2024.07)",
+      "role": "Senior Lecturer, Tung Wah College"
     },
     {
       "prefix": "Dr.",
@@ -182,7 +184,9 @@
     },
     {
       "prefix": "Dr.",
-      "name": "Bin Hu"
+      "name": "Bin Hu (2010—2017)",
+      "bio": "",
+      "role": "Professor, Jinan University, Guangzhou, China"
     }
   ]
 }
