@@ -2,29 +2,176 @@
   "publications": [
     {
       "year": "2026",
+      "title": "A class of COPI cargo receptors regulates processing of transmembrane proteins by reinforcing their Golgi retention",
+      "authors": "Gao, Cong, Wu, et al.",
+      "journal": "Proceedings of the National Academy of Sciences",
+      "link": ""
+    },
+    {
+      "year": "2026",
+      "title": "Chiral recognition of amino acids by mass spectrometry with the combinations of two different chiral selectors",
+      "authors": "Yi, Sheng, Han, Lin, Siu & Yao",
+      "journal": "Cell Reports Physical Science",
+      "link": ""
+    },
+    {
+      "year": "2026",
       "title": "Data storage and retrieval with unnatural proteins expressed via E. coli",
-      "authors": "Yao Z. P., et al.",
+      "authors": "Zhou, Ng, Liu, Tam, Lau & Yao",
       "journal": "Nature Communications",
       "link": "https://doi.org/10.1038/s41467-026-70061-7"
+    },
+    {
+      "year": "2026",
+      "title": "Development of unnatural proteins and LC-MS/MS sequencing for data storage and retrieval",
+      "authors": "Ng",
+      "journal": "ASMS 2026 Proceedings",
+      "link": ""
+    },
+    {
+      "year": "2026",
+      "title": "Dual-signal N-CDs/COFTAPB-DMTP sensor for simultaneous detection and adsorption of aflatoxin B1 in peanuts",
+      "authors": "Li, Pu, Yao & Wei",
+      "journal": "Microchemical Journal",
+      "link": ""
+    },
+    {
+      "year": "2026",
+      "title": "Dynamics of the SS Loop Regulates SARM1′ s Catalysis",
+      "authors": "Yang, He, Li, et al.",
+      "journal": "ACS Chemical Neuroscience",
+      "link": ""
+    },
+    {
+      "year": "2026",
+      "title": "Evaluation of fire extinguisher dry powder as an “in situ” development powder for latent fingermarks",
+      "authors": "Mak & Yao",
+      "journal": "The Science of Nature",
+      "link": ""
+    },
+    {
+      "year": "2026",
+      "title": "Mechanistic insights into chromatin modulation by the “orphan” remodeler ATRX",
+      "authors": "Duan, Wong, Yang, et al.",
+      "journal": "bioRxiv",
+      "link": ""
+    },
+    {
+      "year": "2026",
+      "title": "Preliminary chemical analysis of latent Fingermarks developed with fire extinguisher dry powder by matrix-assisted laser desorption/ionization mass spectrometry imaging",
+      "authors": "Mak, Fung & Yao",
+      "journal": "Forensic Chemistry",
+      "link": ""
+    },
+    {
+      "year": "2026",
+      "title": "Tenfold Expansion Submicrometer MALDI Mass Spectrometry Imaging of Tissues and Cultured Cells",
+      "authors": "Xie, Wang, Guo, et al.",
+      "journal": "Angewandte Chemie",
+      "link": ""
+    },
+    {
+      "year": "2026",
+      "title": "根据串联质谱法对数据编码肽进行测序",
+      "authors": "Yao, Ng, Lau & Tam",
+      "journal": "",
+      "link": ""
+    },
+    {
+      "year": "2025",
+      "title": "Advances in Direct Analysis in Real Time Mass Spectrometry and Its Hyphenation with Sample Pretreatment Techniques",
+      "authors": "Lin & Yao",
+      "journal": "Journal of Instrumental Analysis",
+      "link": ""
+    },
+    {
+      "year": "2025",
+      "title": "Advances in protein sequencing: Techniques, challenges and prospects",
+      "authors": "Luo, Ng, Lam & Yao",
+      "journal": "TrAC Trends in Analytical Chemistry",
+      "link": ""
     },
     {
       "year": "2025",
       "title": "Development of an integrated searching system for rapid and accurate classification of edible oils by matrix-assisted laser desorption/ionization mass spectrometry",
       "authors": "Ma, Li, Li, Wu & Yao",
-      "journal": "Analytica Chimica Acta, 1381, 344804",
+      "journal": "Analytica chimica acta",
       "link": "https://doi.org/10.1016/j.aca.2025.344804"
+    },
+    {
+      "year": "2025",
+      "title": "Inhibitor-Dependent Tolerance of New Delhi Metallo-β-Lactamase Driven by Single Mutation-Induced Conformational Changes",
+      "authors": "Huang, Wong, Cheng, et al.",
+      "journal": "Journal of the American Chemical Society",
+      "link": ""
+    },
+    {
+      "year": "2025",
+      "title": "Recent developments and workflows of non-targeted LC-HRMS screening in the detection of veterinary drug residues in foods",
+      "authors": "Yang, Chen, Li, et al.",
+      "journal": "TrAC Trends in Analytical Chemistry",
+      "link": ""
+    },
+    {
+      "year": "2025",
+      "title": "The interdomain loop modulates conformational dynamics for the antibiotic-resistant activity of TEM-type extended-spectrum β-lactamases",
+      "authors": "Wong, So, Kong & Yao",
+      "journal": "Journal of molecular biology",
+      "link": ""
+    },
+    {
+      "year": "2025",
+      "title": "Uncovering cargo clients and accessory factors of AP-1 and AP-4 through vesicle proteomics",
+      "authors": "Peng, Fan, Liu, et al.",
+      "journal": "Proceedings of the National Academy of Sciences",
+      "link": ""
+    },
+    {
+      "year": "2025",
+      "title": "使用肽的数据存储",
+      "authors": "Yao, Ng, Lau & Tam",
+      "journal": "",
+      "link": ""
+    },
+    {
+      "year": "2024",
+      "title": "Identifications of novel host cell factors that interact with the receptor-binding domain of the SARS-CoV-2 spike protein",
+      "authors": "Tang, Liu, Wang, et al.",
+      "journal": "Journal of Biological Chemistry",
+      "link": ""
+    },
+    {
+      "year": "2024",
+      "title": "Investigation of chloroxylenol in water environments of Hong Kong and the use of fire extinguisher dry powder to develop latent fingermarks by mass spectrometry",
+      "authors": "Mak",
+      "journal": "",
+      "link": ""
+    },
+    {
+      "year": "2024",
+      "title": "Lipin1 depletion coordinates neuronal signaling pathways to promote motor and sensory axon regeneration after spinal cord injury",
+      "authors": "Chen, Wu, Yang, et al.",
+      "journal": "Proceedings of the National Academy of Sciences",
+      "link": ""
+    },
+    {
+      "year": "2024",
+      "title": "Proteomic Analysis of Secreted Vesicle Proteins from the Plant Cells",
+      "authors": "Yin, Wang & Yao",
+      "journal": "Plant Protein Secretion: Methods and Protocols",
+      "link": ""
     },
     {
       "year": "2024",
       "title": "Quantitative Analysis of Blended Oils Based on Intensity Ratios of Marker Ions in MALDI-MS Spectra",
       "authors": "Li, Lin, Ng & Yao",
-      "journal": "Journal of Agricultural and Food Chemistry, 72, 15376–15386",
+      "journal": "Journal of agricultural and food chemistry",
       "link": "https://doi.org/10.1021/acs.jafc.4c02833"
     },
     {
       "year": "2024",
-      "title": "Targeted Quantification of Glutathione/Arginine Redox Metabolism Based on a Novel Paired Mass Spectrometry Probe Approach for the Functional Assessment of Redox Status",
-      "authors": "Zhong, Ling & Yao",
+      "title": "Targeted quantification of glutathione/arginine redox metabolism based on a novel paired mass spectrometry probe approach for the functional assessment of redox status",
+      "authors": "Zhong, Ling, Yao, Liu, Zheng & Xin",
       "journal": "Analytical Chemistry",
       "link": "https://doi.org/10.1021/acs.analchem.4c00732"
     },
@@ -32,8 +179,113 @@
       "year": "2023",
       "title": "Algorithms for de-novo sequencing of peptides by tandem mass spectrometry: A review",
       "authors": "Ng, Zhou & Yao",
-      "journal": "Analytica Chimica Acta, 1268, 341330",
+      "journal": "Analytica Chimica Acta",
       "link": "https://doi.org/10.1016/j.aca.2023.341330"
+    },
+    {
+      "year": "2023",
+      "title": "Lysyl hydroxylase LH1 promotes confined migration and metastasis of cancer cells by stabilizing Septin2 to enhance actin network",
+      "authors": "Yang, Zhou, Si, et al.",
+      "journal": "Molecular cancer",
+      "link": ""
+    },
+    {
+      "year": "2023",
+      "title": "Rapid authentication of red wine by MALDI-MS combined with DART-MS",
+      "authors": "Lin, Wu, Huang, Wu & Yao",
+      "journal": "Analytica chimica acta",
+      "link": ""
+    },
+    {
+      "year": "2023",
+      "title": "TMED10 mediates the trafficking of insulin-like growth factor 2 along the secretory pathway for myoblast differentiation",
+      "authors": "Li, Yang, Heng, et al.",
+      "journal": "Proceedings of the National Academy of Sciences",
+      "link": ""
+    },
+    {
+      "year": "2022",
+      "title": "Advances in rapid detection of SARS-CoV-2 by mass spectrometry",
+      "authors": "Wong, So & Yao",
+      "journal": "TrAC Trends in Analytical Chemistry",
+      "link": ""
+    },
+    {
+      "year": "2022",
+      "title": "Assembly-enhanced differentiation of isomers by ion mobility mass spectrometry",
+      "authors": "Han",
+      "journal": "",
+      "link": ""
+    },
+    {
+      "year": "2022",
+      "title": "Electrospray ionization mass spectrometry with wooden tips: A review",
+      "authors": "Hu & Yao",
+      "journal": "Analytica chimica acta",
+      "link": ""
+    },
+    {
+      "year": "2022",
+      "title": "Least absolute shrinkage and selection operator-based prediction of collision cross section values for ion mobility mass spectrometric analysis of lipids",
+      "authors": "Wang, Yin, Zheng, Liu, Yao & Xin",
+      "journal": "Analyst",
+      "link": ""
+    },
+    {
+      "year": "2022",
+      "title": "食用油分析方法, 识别系统, 产生库的方法及数据载体",
+      "authors": "Yao, Ng, Ng & Li",
+      "journal": "",
+      "link": ""
+    },
+    {
+      "year": "2021",
+      "title": "A distinct giant coat protein complex II vesicle population in Arabidopsis thaliana",
+      "authors": "Li, Zeng, Cao, et al.",
+      "journal": "Nature Plants",
+      "link": ""
+    },
+    {
+      "year": "2021",
+      "title": "An in vitro vesicle formation assay reveals cargo clients and factors that mediate vesicular trafficking",
+      "authors": "Huang, Yin, Li, et al.",
+      "journal": "Proceedings of the National Academy of Sciences",
+      "link": ""
+    },
+    {
+      "year": "2021",
+      "title": "Data storage using peptide sequences",
+      "authors": "Ng, Tam, Yin, et al.",
+      "journal": "Nature communications",
+      "link": ""
+    },
+    {
+      "year": "2021",
+      "title": "Dual-mode sensing platform for electrochemiluminescence and colorimetry detection based on a closed bipolar electrode",
+      "authors": "Hu, Zhu, Mei, Liu, Yao & Li",
+      "journal": "Analytical Chemistry",
+      "link": ""
+    },
+    {
+      "year": "2021",
+      "title": "Integrated hand-held electrochemical sensor for multicomponent detection in urine",
+      "authors": "Liu, Lu, Zhang, et al.",
+      "journal": "Biosensors and Bioelectronics",
+      "link": ""
+    },
+    {
+      "year": "2021",
+      "title": "Quantitative analysis of blended oils by matrix-assisted laser desorption/ionization mass spectrometry and partial least squares regression",
+      "authors": "Li, Ng & Yao",
+      "journal": "Food chemistry",
+      "link": ""
+    },
+    {
+      "year": "2021",
+      "title": "Rapid quantitation of oil compositions in blended oils by matrix-assisted laser desorption/ionization mass spectrometry",
+      "authors": "Li",
+      "journal": "",
+      "link": ""
     }
   ]
 }

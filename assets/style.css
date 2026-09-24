@@ -72,8 +72,8 @@ section{padding:56px 0}
 
 /* Person cards */
 .person{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;text-align:center}
-.person .avatar{width:96px;height:96px;margin:0 auto 12px;border-radius:50%;background:linear-gradient(135deg,#0e7c6b,#0aa8c9);color:#fff;display:grid;place-items:center;font-size:30px;font-weight:700;overflow:hidden}
-.person .avatar img{width:100%;height:100%;object-fit:cover}
+.person .avatar{width:110px;margin:0 auto 12px;border-radius:8px;background:linear-gradient(135deg,#0e7c6b,#0aa8c9);color:#fff;display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:700;overflow:hidden;min-height:110px}
+.person .avatar img{width:100%;height:auto;display:block}
 .person h3{margin:0;font-size:15.5px}
 .person .role{color:var(--teal);font-size:13px;font-weight:600;margin:3px 0 8px}
 .person .bio{color:var(--muted);font-size:13px;margin-bottom:10px}
