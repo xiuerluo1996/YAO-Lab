@@ -46,7 +46,7 @@
     {
       "prefix": "Mr.",
       "name": "Xiuer Luo （2022.09—now）",
-      "bio": "I am a PhD student in the Department of Life Sciences at The Hong Kong Polytechnic University.  I obtained my Bachelor's  degree in Food Quality and Safety from Nanchang University.  And I obtained my Master's degree in Food Science and Engineering from South China University of Tchnology. My PhD research focuses on nanopore protein sequencing and nanopore proteomics. Outside of research, I enjoy staying active through badminton, climbing, and hiking, while also relaxing with movies and spending time with animals.",
+      "bio": "I am a PhD student at the Hong Kong Polythechnic University.  I obtained my Bachelor's  degree in Food Quality and Safety from Nanchang University and Master's degree in Food Science and Engineering from South China University of Tchnology. My PhD research focuses on nanopore protein sequencing and nanopore proteomics. Outside of research, I enjoy staying active through badminton, climbing, and hiking, while also relaxing with movies and spending time with animals.",
       "email": "xiuer.luo@connect.polyu.hk",
       "link": "",
       "photo": "/assets/uploads/luo-xiuer.jpg"
@@ -143,16 +143,60 @@
   "visiting": [],
   "ra": [],
   "alumni": [
-    { "name": "Dr. Suying Li", "period": "", "status": "" },
-    { "name": "Dr. Jianying Wang", "period": "", "status": "" },
-    { "name": "Dr. Patrick Tse Fung Wong", "period": "2016.12—2026.07", "status": "Scientific Officer, The Hong Kong Polytechnic University" },
-    { "name": "Dr. Qi Yi", "period": "", "status": "" },
-    { "name": "Dr. Chengxi Liu", "period": "", "status": "" },
-    { "name": "Dr. Qinyu Jia", "period": "", "status": "" },
-    { "name": "Dr. Dong Zhang", "period": "", "status": "" },
-    { "name": "Dr. Dongqi Han", "period": "", "status": "" },
-    { "name": "Dr. Eugene Zhen Yan Li", "period": "2016.12—2024.07", "status": "Senior Lecturer, Tung Wah College" },
-    { "name": "Dr. Liwen Huang", "period": "", "status": "" },
-    { "name": "Dr. Bin Hu", "period": "2010—2017", "status": "Professor, Jinan University, Guangzhou, China" }
+    {
+      "name": "Dr. Suying Li",
+      "period": "",
+      "status": ""
+    },
+    {
+      "name": "Dr. Jianying Wang",
+      "period": "",
+      "status": ""
+    },
+    {
+      "name": "Dr. Patrick Tse Fung Wong",
+      "period": "2016.12—2026.07",
+      "status": "Scientific Officer, The Hong Kong Polytechnic University"
+    },
+    {
+      "name": "Dr. Qi Yi",
+      "period": "",
+      "status": ""
+    },
+    {
+      "name": "Dr. Chengxi Liu",
+      "period": "",
+      "status": ""
+    },
+    {
+      "name": "Dr. Qinyu Jia",
+      "period": "",
+      "status": ""
+    },
+    {
+      "name": "Dr. Dong Zhang",
+      "period": "",
+      "status": ""
+    },
+    {
+      "name": "Dr. Dongqi Han",
+      "period": "",
+      "status": ""
+    },
+    {
+      "name": "Dr. Eugene Zhen Yan Li",
+      "period": "2016.12—2024.07",
+      "status": "Senior Lecturer, Tung Wah College"
+    },
+    {
+      "name": "Dr. Liwen Huang",
+      "period": "",
+      "status": ""
+    },
+    {
+      "name": "Dr. Bin Hu",
+      "period": "2010—2017",
+      "status": "Professor, Jinan University, Guangzhou, China"
+    }
   ]
 }
