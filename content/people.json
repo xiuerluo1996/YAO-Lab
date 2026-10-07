@@ -1,13 +1,20 @@
 {
-  "rap": [],
+  "rap": [
+    {
+      "prefix": "Dr.",
+      "name": "Cheuk Chi Ng (2025.10-now)",
+      "bio": "I got my PhD in Chemistry in the University of New South Wales under Prof Justin Gooding in 2011. My research interests lie in the intersection of mass spectrometry, proteomics and information technology, in projects such as peptide drug discovery and data storage in peptides and proteins. My hobbies are hiking and running and combination of both.",
+      "photo": "/assets/uploads/a_ng-cheukchi.png"
+    }
+  ],
   "postdocs": [
     {
       "prefix": "Dr.",
       "name": "Weiwei Chen",
-      "bio": "",
+      "bio": "Chiral Powerlifting",
       "email": "",
       "link": "",
-      "photo": ""
+      "photo": "/assets/uploads/wwei.c_2026-09-24-20.33.17_img_1914.jpeg"
     },
     {
       "prefix": "Dr.",
@@ -77,16 +84,16 @@
     },
     {
       "prefix": "Mr.",
-      "name": "Biming Zhong",
-      "bio": "",
+      "name": "Biming Zhong (2023.09.01-now)",
+      "bio": "Thinking before doing",
       "email": "",
       "link": "",
-      "photo": ""
+      "photo": "/assets/uploads/elvis_2026-10-04-03.08.15_elvis.jpg"
     },
     {
       "prefix": "Mr.",
       "name": "Zezhong Feng (2023.09—now)",
-      "bio": "",
+      "bio": "My research mainly focus on the screening, identification (by HRMS) and test of the peptide/small molecule drugs against several pathogenic proteins.",
       "email": "",
       "link": "",
       "photo": "/assets/uploads/feng-zezhong.jpg"
@@ -109,11 +116,11 @@
     },
     {
       "prefix": "Miss.",
-      "name": "Haimei Shi",
-      "bio": "",
+      "name": "Haimei Shi (2024.01—now)",
+      "bio": "Joint Ph.D. Student (PolyU/SIAT) | M.S. in Chemical Biology (Fudan University)\nFocus: Phage functional protein mining and novel antimicrobial development.\nOcean enthusiast & handcraft lover.",
       "email": "",
       "link": "",
-      "photo": ""
+      "photo": "/assets/uploads/sh-haimei.jpg"
     },
     {
       "prefix": "Miss.",
@@ -140,8 +147,25 @@
       "photo": "/assets/uploads/zeng-yiwe.jpeg"
     }
   ],
-  "visiting": [],
-  "ra": [],
+  "visiting": [
+    {
+      "name": "Chao Wang",
+      "from": "I am Wang Chao, an exchange student from Guangdong University of Technology. My research focuses on the development of single-cell metabolomics methods and the construction of data processing pipelines. I mainly conduct my research using mass spectrometry. In my spare time, I enjoy sports such as basketball and swimming.",
+      "period": " 2026.01-2027.01"
+    }
+  ],
+  "ra": [
+    {
+      "prefix": "Miss.",
+      "name": "Kelly Wing Tung Leung (2026.09-now)"
+    },
+    {
+      "prefix": "Miss.",
+      "name": "Hin Tung Chan ",
+      "bio": "Hello, I'm Kelly Chan. I completed my BSc in Analytical Sciences for Testing and Certification at PolyU. I am interested in analytical chemistry, mass spectrometry, and chiral recognition, and I have just joined Prof. Yao's group as a Research Assistant. Outside the lab, I enjoy listening to music and jogging. I look forward to learning from the team and contributing to the group's research.",
+      "photo": "/assets/uploads/xuantong.jpeg"
+    }
+  ],
   "alumni": [
     {
       "name": "Dr. Suying Li",
