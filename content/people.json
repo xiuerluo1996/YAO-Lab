@@ -169,13 +169,13 @@
   "alumni": [
     {
       "name": "Dr. Suying Li",
-      "period": "",
-      "status": ""
+      "period": "2016-2022",
+      "status": "Scientific Officer, PolyU Shenzhen Research Institute"
     },
     {
       "name": "Dr. Jianying Wang",
-      "period": "",
-      "status": ""
+      "period": "2016-2022",
+      "status": "Inspection Manager, 3S BIO INC"
     },
     {
       "name": "Dr. Patrick Tse Fung Wong",
@@ -184,28 +184,28 @@
     },
     {
       "name": "Dr. Qi Yi",
-      "period": "",
-      "status": ""
+      "period": "2021-2026",
+      "status": "WuXi AppTec"
     },
     {
       "name": "Dr. Chengxi Liu",
-      "period": "",
-      "status": ""
+      "period": "2021-2026",
+      "status": "NA"
     },
     {
       "name": "Dr. Qinyu Jia",
-      "period": "",
-      "status": ""
+      "period": "2021-2026",
+      "status": "Postdoc, Washington University in St. Louis"
     },
     {
       "name": "Dr. Dong Zhang",
-      "period": "",
-      "status": ""
+      "period": "2019-2026",
+      "status": "Postdoc， CUHK"
     },
     {
       "name": "Dr. Dongqi Han",
-      "period": "",
-      "status": ""
+      "period": "2019-2025",
+      "status": "NA"
     },
     {
       "name": "Dr. Eugene Zhen Yan Li",
@@ -214,13 +214,28 @@
     },
     {
       "name": "Dr. Liwen Huang",
-      "period": "",
-      "status": ""
+      "period": "2015-2020",
+      "status": "Researcher of Jinhua Institute of Zhejiang University, founder of Jinhua Zhike Biotechnology Company"
     },
     {
       "name": "Dr. Bin Hu",
       "period": "2010—2017",
       "status": "Professor, Jinan University, Guangzhou, China"
+    },
+    {
+      "name": "Mr. Jun Dai",
+      "period": "2020-2022",
+      "status": "Phd candidate, City University of Hong Kong"
+    },
+    {
+      "name": "Dr. Deejay Suen Yui MAK",
+      "period": "2019-2024",
+      "status": "Assistant Professor, Tung Wah College"
+    },
+    {
+      "name": "Dr. Haidi Yin",
+      "status": " Deputy Director of Bio-Tech Center (Bio-Tech Center), Shenzhen Medical Academy of Research and Translation: Shenzhen, Guangdong, CN",
+      "period": "2015-2021"
     }
   ]
 }
