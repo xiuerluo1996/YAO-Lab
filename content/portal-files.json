@@ -104,6 +104,12 @@
       "category": "theses",
       "title": "2024-Zhen Yan Li",
       "file": "/assets/uploads/2024-zhen-yan-li.pdf"
+    },
+    {
+      "category": "protocols",
+      "title": "Waters Synapt G2-Si ",
+      "description": "Basic procedures for operating Waters Synapt instrument: LC-MS and Native MS (including needle preparation)",
+      "file": "/assets/uploads/ms_waters_synapt_g2_si_lcms_nativems_manual.pdf"
     }
   ]
 }
