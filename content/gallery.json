@@ -6,7 +6,11 @@
       "location": "The Hong Kong Polytechnic University",
       "category": "conference",
       "cover": "/assets/uploads/9651f286af5911d956db45111f356a6d.jpg",
-      "description": "Prof. Yao Zhongping, as the Conference Chair, organized the 9th World Chinese Mass Spectrometry Conference at The Hong Kong Polytechnic University from 6 to 8 November 2026."
+      "description": "Prof. Yao Zhongping, as the Conference Chair, organized the 9th World Chinese Mass Spectrometry Conference at The Hong Kong Polytechnic University from 6 to 8 November 2026.",
+      "images": [
+        "/assets/uploads/7ee11dab7c1a2a5f0134fbe09d758888.jpg",
+        "/assets/uploads/d83b1db4da9f74eaa71078abb63fe373.jpg"
+      ]
     }
   ]
 }
