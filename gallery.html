@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery — Yao Lab | PolyU</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
+      <span class="logo">✦</span>
+      <span>Yao Lab<span class="sub">Mass Spectrometry &amp; Chemical Biology · PolyU</span></span>
+    </a>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="pi.html">PI</a>
+      <a href="research.html">Research</a>
+      <a href="people.html">People</a>
+      <a href="publications.html">Publications</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="join.html">Join us</a>
+      <a href="portal.html">Research Portal</a>
+    </nav>
+  </div>
+</header>
+
+<section style="padding:48px 0">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Gallery</span>
+      <h2>Lab news and activities</h2>
+      <p>Conference reports, member presentations and memorable moments from Yao Lab.</p>
+    </div>
+    <div class="gallery-filters" id="galleryFilters"></div>
+    <div class="grid gallery-grid" id="galleryGrid"></div>
+  </div>
+</section>
+
+<div class="gallery-modal" id="galleryModal" role="dialog" aria-modal="true" aria-labelledby="galleryModalTitle">
+  <div class="gallery-modal-inner">
+    <button class="gallery-modal-close" id="galleryModalClose" aria-label="Close">&times;</button>
+    <h2 id="galleryModalTitle"></h2>
+    <div class="gallery-meta" id="galleryModalMeta"></div>
+    <p id="galleryModalDescription"></p>
+    <div id="galleryModalLink"></div>
+    <div class="gallery-album" id="galleryModalAlbum"></div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="col"><h4>Yao Lab</h4><p>Department of Life Sciences<br>The Hong Kong Polytechnic University</p></div>
+    <div class="col"><h4>Contact</h4><p>Prof. Zhongping Yao<br><a href="mailto:zhongping.yao@polyu.edu.hk">zhongping.yao@polyu.edu.hk</a></p></div>
+    <div class="col"><h4>Address</h4><p>Hung Hom, Kowloon, Hong Kong</p></div>
+  </div>
+  <div class="wrap" style="margin-top:18px;justify-content:flex-start"><p style="font-size:12px">© <span class="year"></span> Yao Lab · The Hong Kong Polytechnic University</p></div>
+</footer>
+<script src="assets/main.js"></script>
+<script>
+const CATEGORY_NAMES = {
+  conference: "Conference report",
+  oral: "Oral presentation",
+  poster: "Poster presentation",
+  lab: "Lab activity",
+  award: "Award",
+  news: "News"
+};
+let events = [];
+function esc(value){
+  return String(value == null ? "" : value).replace(/[&<>"']/g, c => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;" }[c]));
+}
+function categoryName(category){
+  return CATEGORY_NAMES[category] || "News";
+}
+function renderFilters(){
+  const categories = [...new Set(events.map(event => event.category).filter(Boolean))];
+  const filters = [["all", "All"], ...categories.map(category => [category, categoryName(category)])];
+  document.getElementById("galleryFilters").innerHTML = filters.map(([value,label]) =>
+    '<button class="gallery-filter'+(value === "all" ? " active" : "")+'" type="button" data-filter="'+esc(value)+'">'+esc(label)+'</button>'
+  ).join("");
+}
+function renderGallery(filter){
+  const visible = filter === "all" ? events : events.filter(event => event.category === filter);
+  document.getElementById("galleryGrid").innerHTML = visible.length ? visible.map((event,index) => {
+    const cover = event.cover || (event.images && event.images[0]) || "";
+    return '<article class="card gallery-card" data-event-index="'+events.indexOf(event)+'">'+
+      (cover ? '<img class="gallery-cover" src="'+esc(cover)+'" alt="'+esc(event.title)+'">' : "") +
+      '<div class="gallery-content"><span class="tag">'+esc(categoryName(event.category))+'</span>'+
+      '<h3>'+esc(event.title)+'</h3><div class="gallery-meta">'+
+      (event.date ? '<span>'+esc(event.date)+'</span>' : "") +
+      (event.location ? '<span>'+esc(event.location)+'</span>' : "") +
+      '</div>'+ (event.description ? '<p>'+esc(event.description)+'</p>' : "") +
+      '</div></article>';
+  }).join("") : '<p style="color:var(--muted)">No gallery items have been added yet.</p>';
+}
+function openEvent(index){
+  const event = events[index];
+  if (!event) return;
+  document.getElementById("galleryModalTitle").textContent = event.title || "";
+  document.getElementById("galleryModalMeta").innerHTML =
+    '<span>'+esc(categoryName(event.category))+'</span>' +
+    (event.date ? '<span>'+esc(event.date)+'</span>' : "") +
+    (event.location ? '<span>'+esc(event.location)+'</span>' : "");
+  document.getElementById("galleryModalDescription").textContent = event.description || "";
+  document.getElementById("galleryModalLink").innerHTML = event.link ?
+    '<a href="'+esc(event.link)+'" target="_blank" rel="noopener">View more</a>' : "";
+  document.getElementById("galleryModalAlbum").innerHTML = (event.images || []).map(image =>
+    '<img src="'+esc(image)+'" alt="'+esc(event.title)+'">'
+  ).join("");
+  document.getElementById("galleryModal").classList.add("open");
+  document.body.style.overflow = "hidden";
+}
+function closeModal(){
+  document.getElementById("galleryModal").classList.remove("open");
+  document.body.style.overflow = "";
+}
+document.getElementById("galleryFilters").addEventListener("click", function(event){
+  const button = event.target.closest("[data-filter]");
+  if (!button) return;
+  document.querySelectorAll(".gallery-filter").forEach(item => item.classList.remove("active"));
+  button.classList.add("active");
+  renderGallery(button.dataset.filter);
+});
+document.getElementById("galleryGrid").addEventListener("click", function(event){
+  const card = event.target.closest("[data-event-index]");
+  if (card) openEvent(Number(card.dataset.eventIndex));
+});
+document.getElementById("galleryModalClose").addEventListener("click", closeModal);
+document.getElementById("galleryModal").addEventListener("click", function(event){
+  if (event.target === this) closeModal();
+});
+document.addEventListener("keydown", function(event){
+  if (event.key === "Escape") closeModal();
+});
+fetch("content/gallery.json").then(response => response.json()).then(data=>{
+  events = (data.events || []).slice().sort((a,b)=>String(b.date||"").localeCompare(String(a.date||"")));
+  renderFilters();
+  renderGallery("all");
+}).catch(()=>{});
+</script>
+<script src="assets/identity.js"></script>
+</body>
+</html>

@@ -6,6 +6,41 @@ media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
 collections:
+  - name: "gallery"
+    label: "Gallery"
+    files:
+      - name: "gallery"
+        label: "Gallery"
+        file: "content/gallery.json"
+        format: json
+        fields:
+          - label: "Gallery events"
+            name: "events"
+            widget: "list"
+            summary: "{{fields.date}} — {{fields.title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", time_format: false }
+              - { label: "Location", name: "location", widget: "string", required: false }
+              - label: "Category"
+                name: "category"
+                widget: "select"
+                options:
+                  - { label: "Conference report", value: "conference" }
+                  - { label: "Oral presentation", value: "oral" }
+                  - { label: "Poster presentation", value: "poster" }
+                  - { label: "Lab activity", value: "lab" }
+                  - { label: "Award", value: "award" }
+                  - { label: "News", value: "news" }
+              - { label: "Cover image", name: "cover", widget: "image" }
+              - { label: "Description", name: "description", widget: "text", required: false }
+              - label: "Album images"
+                name: "images"
+                widget: "list"
+                required: false
+                field: { label: "Image", name: "image", widget: "image" }
+              - { label: "External link", name: "link", widget: "string", required: false }
+
   - name: "people"
     label: "People"
     files:
