@@ -89,6 +89,8 @@ section{padding:56px 0}
 .gallery-modal h2{margin:0 44px 6px 0}
 .gallery-album{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:16px}
 .gallery-album img{width:100%;height:300px;object-fit:contain;display:block;border-radius:8px;background:#eef5f3}
+.gallery-album figure{margin:0}
+.gallery-album figcaption{margin-top:6px;color:var(--muted);font-size:13px}
 
 /* Person cards */
 .person{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;text-align:center}

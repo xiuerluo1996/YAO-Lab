@@ -20,7 +20,7 @@ collections:
             summary: "{{fields.date}} — {{fields.title}}"
             fields:
               - { label: "Title", name: "title", widget: "string" }
-              - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", time_format: false }
+              - { label: "Date", name: "date", widget: "string", required: false, hint: "Example: 23 November 2026, 2026.11.23, or November 2026" }
               - { label: "Location", name: "location", widget: "string", required: false }
               - label: "Category"
                 name: "category"
@@ -32,13 +32,16 @@ collections:
                   - { label: "Lab activity", value: "lab" }
                   - { label: "Award", value: "award" }
                   - { label: "News", value: "news" }
-              - { label: "Cover image", name: "cover", widget: "image" }
+              - { label: "Cover image", name: "cover", widget: "image", required: false }
               - { label: "Description", name: "description", widget: "text", required: false }
               - label: "Album images"
                 name: "images"
                 widget: "list"
                 required: false
-                field: { label: "Image", name: "image", widget: "image" }
+                summary: "{{fields.caption}}"
+                fields:
+                  - { label: "Image", name: "image", widget: "image" }
+                  - { label: "Caption", name: "caption", widget: "string", required: false }
               - { label: "External link", name: "link", widget: "string", required: false }
 
   - name: "people"

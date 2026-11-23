@@ -85,7 +85,9 @@ function renderFilters(){
 function renderGallery(filter){
   const visible = filter === "all" ? events : events.filter(event => event.category === filter);
   document.getElementById("galleryGrid").innerHTML = visible.length ? visible.map((event,index) => {
-    const cover = event.cover || (event.images && event.images[0]) || "";
+    const firstImage = event.images && event.images[0];
+    const firstImageUrl = typeof firstImage === "string" ? firstImage : (firstImage && firstImage.image) || "";
+    const cover = event.cover || firstImageUrl || "";
     return '<article class="card gallery-card" data-event-index="'+events.indexOf(event)+'">'+
       (cover ? '<img class="gallery-cover" src="'+esc(cover)+'" alt="'+esc(event.title)+'">' : "") +
       '<div class="gallery-content"><span class="tag">'+esc(categoryName(event.category))+'</span>'+
@@ -107,9 +109,13 @@ function openEvent(index){
   document.getElementById("galleryModalDescription").textContent = event.description || "";
   document.getElementById("galleryModalLink").innerHTML = event.link ?
     '<a href="'+esc(event.link)+'" target="_blank" rel="noopener">View more</a>' : "";
-  document.getElementById("galleryModalAlbum").innerHTML = (event.images || []).map(image =>
-    '<img src="'+esc(image)+'" alt="'+esc(event.title)+'">'
-  ).join("");
+  document.getElementById("galleryModalAlbum").innerHTML = (event.images || []).map(item => {
+    const image = typeof item === "string" ? item : (item.image || "");
+    const caption = typeof item === "string" ? "" : (item.caption || "");
+    if (!image) return "";
+    return '<figure><img src="'+esc(image)+'" alt="'+esc(caption || event.title)+'">'+
+      (caption ? '<figcaption>'+esc(caption)+'</figcaption>' : "")+'</figure>';
+  }).join("");
   document.getElementById("galleryModal").classList.add("open");
   document.body.style.overflow = "hidden";
 }
@@ -136,7 +142,7 @@ document.addEventListener("keydown", function(event){
   if (event.key === "Escape") closeModal();
 });
 fetch("content/gallery.json").then(response => response.json()).then(data=>{
-  events = (data.events || []).slice().sort((a,b)=>String(b.date||"").localeCompare(String(a.date||"")));
+  events = (data.events || []).slice();
   renderFilters();
   renderGallery("all");
 }).catch(()=>{});
