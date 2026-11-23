@@ -131,7 +131,7 @@ const TOPICS = [
   {img:"assets/img/analytical-techniques.jpg.png", t:"New analytical techniques", d:"Ambient ionization and novel mass-spectrometry workflows for direct analysis."}
 ];
 document.getElementById('topics').innerHTML = TOPICS.map(x=>
-  '<div class="card"><div class="icon"><img src="'+x.img+'" alt="'+x.t+'"></div><h3>'+x.t+'</h3><p>'+x.d+'</p></div>'
+  '<div class="card"><div class="icon" style="height:240px"><img src="'+x.img+'" alt="'+x.t+'" style="width:100%;height:100%;object-fit:contain"></div><h3>'+x.t+'</h3><p>'+x.d+'</p></div>'
 ).join('');
 </script>
 <script src="assets/identity.js"></script>

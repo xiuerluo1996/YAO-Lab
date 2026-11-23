@@ -49,16 +49,16 @@
 <script src="assets/main.js"></script>
 <script>
 const TOPICS = [
-  {img:"assets/img/molecular-data-storage.svg", t:"Molecular data storage", d:"We design unnatural proteins and peptides as carriers of digital information, encoding, storing and retrieving data by LC-MS/MS and de novo sequencing algorithms, with error-correction, random access and encryption."},
-  {img:"assets/img/protein-dynamics.svg", t:"Conformational dynamics of proteins & protein interactions", d:"Using native mass spectrometry, hydrogen/deuterium exchange MS (HDX-MS), ion mobility MS and molecular dynamics simulations, we study the structure, dynamics and interactions of proteins such as β-lactamases and SARS-CoV-2 proteins."},
-  {img:"assets/img/peptide-drug.svg", t:"Peptide drug discovery", d:"We advance de novo peptide sequencing by tandem mass spectrometry and discover bioactive peptides with therapeutic potential."},
-  {img:"assets/img/biomarker.svg", t:"Mechanistic study & biomarker discovery", d:"Mass-spectrometry-based multi-omics approaches reveal the molecular mechanisms of diseases and biological processes, and identify diagnostic and prognostic biomarkers."},
-  {img:"assets/img/molecular-assembly.svg", t:"Molecular assembly & recognition", d:"We investigate non-covalent molecular assembly, chiral recognition and host–guest interactions at the molecular level."},
-  {img:"assets/img/food-safety.svg", t:"Food safety", d:"We develop rapid MALDI-MS methods for authentication and quality analysis of foods, including edible oils, herbs and other high-value commodities."},
-  {img:"assets/img/analytical-techniques.svg", t:"New analytical techniques", d:"We create new ionization methods (e.g. wooden-tip ESI, substrate-based ionization) and novel MS workflows for direct, in situ and high-throughput analysis."}
+  {img:"assets/img/molecular-data-storage.jpg.png", t:"Molecular data storage", d:"We design unnatural proteins and peptides as carriers of digital information, encoding, storing and retrieving data by LC-MS/MS and de novo sequencing algorithms, with error-correction, random access and encryption."},
+  {img:"assets/img/protein-dynamics.jpg.png", t:"Conformational dynamics of proteins & protein interactions", d:"Using native mass spectrometry, hydrogen/deuterium exchange MS (HDX-MS), ion mobility MS and molecular dynamics simulations, we study the structure, dynamics and interactions of proteins such as β-lactamases and SARS-CoV-2 proteins."},
+  {img:"assets/img/peptide-drug.jpg.png", t:"Peptide drug discovery", d:"We advance de novo peptide sequencing by tandem mass spectrometry and discover bioactive peptides with therapeutic potential."},
+  {img:"assets/img/biomarker.jpg.png", t:"Mechanistic study & biomarker discovery", d:"Mass-spectrometry-based multi-omics approaches reveal the molecular mechanisms of diseases and biological processes, and identify diagnostic and prognostic biomarkers."},
+  {img:"assets/img/molecular-assembly.jpg.jpeg", t:"Molecular assembly & recognition", d:"We investigate non-covalent molecular assembly, chiral recognition and host–guest interactions at the molecular level."},
+  {img:"assets/img/food-safety.jpg.jpg", t:"Food safety", d:"We develop rapid MALDI-MS methods for authentication and quality analysis of foods, including edible oils, herbs and other high-value commodities."},
+  {img:"assets/img/analytical-techniques.jpg.png", t:"New analytical techniques", d:"We create new ionization methods (e.g. wooden-tip ESI, substrate-based ionization) and novel MS workflows for direct, in situ and high-throughput analysis."}
 ];
 document.getElementById('topics').innerHTML = TOPICS.map(x=>
-  '<div class="card"><div class="icon" style="height:200px"><img src="'+x.img+'" alt="'+x.t+'" style="width:100%;height:100%;object-fit:cover"></div><h3>'+x.t+'</h3><p>'+x.d+'</p></div>'
+  '<div class="card"><div class="icon" style="height:240px"><img src="'+x.img+'" alt="'+x.t+'" style="width:100%;height:100%;object-fit:contain"></div><h3>'+x.t+'</h3><p>'+x.d+'</p></div>'
 ).join('');
 </script>
 <script src="assets/identity.js"></script>
