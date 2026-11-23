@@ -121,16 +121,16 @@
 <script src="assets/main.js"></script>
 <script>
 const TOPICS = [
-  {img:"assets/img/molecular-data-storage.svg", t:"Molecular data storage", d:"Designed proteins and peptides as digital data carriers, with encoding, storage and LC-MS/MS-based retrieval."},
-  {img:"assets/img/protein-dynamics.svg", t:"Protein conformational dynamics", d:"Native MS, HDX-MS and ion mobility MS to probe protein structure, dynamics and interactions."},
-  {img:"assets/img/peptide-drug.svg", t:"Peptide drug discovery", d:"De novo peptide sequencing and discovery of bioactive peptides as therapeutics."},
-  {img:"assets/img/biomarker.svg", t:"Mechanistic study & biomarker discovery", d:"MS-based multi-omics to reveal disease mechanisms and discover biomarkers."},
-  {img:"assets/img/molecular-assembly.svg", t:"Molecular assembly & recognition", d:"Non-covalent assembly, chiral recognition and host–guest interactions."},
-  {img:"assets/img/food-safety.svg", t:"Food safety", d:"Rapid authentication and quality analysis of foods by MALDI-MS."},
-  {img:"assets/img/analytical-techniques.svg", t:"New analytical techniques", d:"Ambient ionization and novel mass-spectrometry workflows for direct analysis."}
+  {img:"assets/img/molecular-data-storage.jpg.png", t:"Molecular data storage", d:"Designed proteins and peptides as digital data carriers, with encoding, storage and LC-MS/MS-based retrieval."},
+  {img:"assets/img/protein-dynamics.jpg.png", t:"Protein conformational dynamics", d:"Native MS, HDX-MS and ion mobility MS to probe protein structure, dynamics and interactions."},
+  {img:"assets/img/peptide-drug.jpg.png", t:"Peptide drug discovery", d:"De novo peptide sequencing and discovery of bioactive peptides as therapeutics."},
+  {img:"assets/img/biomarker.jpg.png", t:"Mechanistic study & biomarker discovery", d:"MS-based multi-omics to reveal disease mechanisms and discover biomarkers."},
+  {img:"assets/img/molecular-assembly.jpg.jpeg", t:"Molecular assembly & recognition", d:"Non-covalent assembly, chiral recognition and host–guest interactions."},
+  {img:"assets/img/food-safety.jpg.jpg", t:"Food safety", d:"Rapid authentication and quality analysis of foods by MALDI-MS."},
+  {img:"assets/img/analytical-techniques.jpg.png", t:"New analytical techniques", d:"Ambient ionization and novel mass-spectrometry workflows for direct analysis."}
 ];
 document.getElementById('topics').innerHTML = TOPICS.map(x=>
-  '<div class="card"><div class="icon"><img src="'+x.img+'" alt="'+x.t+'" style="width:100%;height:100%;object-fit:cover"></div><h3>'+x.t+'</h3><p>'+x.d+'</p></div>'
+  '<div class="card"><div class="icon"><img src="'+x.img+'" alt="'+x.t+'"></div><h3>'+x.t+'</h3><p>'+x.d+'</p></div>'
 ).join('');
 </script>
 <script src="assets/identity.js"></script>
