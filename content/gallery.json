@@ -1,3 +1,11 @@
 {
-  "events": []
+  "events": [
+    {
+      "title": " The 9th World Chinese Mass Spectrometry Conference (WCMSC)",
+      "date": "2026-11-06",
+      "location": "The Hong Kong Polytechnic University",
+      "category": "conference",
+      "cover": "/assets/uploads/7ee11dab7c1a2a5f0134fbe09d758888.jpg"
+    }
+  ]
 }
