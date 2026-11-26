@@ -74,7 +74,7 @@
       "year": "2026",
       "title": "根据串联质谱法对数据编码肽进行测序",
       "authors": "Yao, Ng, Lau & Tam",
-      "journal": "",
+      "journal": "中国专利",
       "link": ""
     },
     {
@@ -130,7 +130,7 @@
       "year": "2025",
       "title": "使用肽的数据存储",
       "authors": "Yao, Ng, Lau & Tam",
-      "journal": "",
+      "journal": "中国专利",
       "link": ""
     },
     {
@@ -143,8 +143,8 @@
     {
       "year": "2024",
       "title": "Investigation of chloroxylenol in water environments of Hong Kong and the use of fire extinguisher dry powder to develop latent fingermarks by mass spectrometry",
-      "authors": "Mak",
-      "journal": "",
+      "authors": "Mak, Suen Yui",
+      "journal": "Thesis",
       "link": ""
     },
     {
@@ -213,8 +213,8 @@
     {
       "year": "2022",
       "title": "Assembly-enhanced differentiation of isomers by ion mobility mass spectrometry",
-      "authors": "Han",
-      "journal": "",
+      "authors": "Han Dongqi",
+      "journal": "Thesis",
       "link": ""
     },
     {
@@ -235,7 +235,7 @@
       "year": "2022",
       "title": "食用油分析方法, 识别系统, 产生库的方法及数据载体",
       "authors": "Yao, Ng, Ng & Li",
-      "journal": "",
+      "journal": "Patent No. ZL201710588321.1",
       "link": ""
     },
     {
@@ -283,9 +283,50 @@
     {
       "year": "2021",
       "title": "Rapid quantitation of oil compositions in blended oils by matrix-assisted laser desorption/ionization mass spectrometry",
-      "authors": "Li",
-      "journal": "",
+      "authors": "Li Suying",
+      "journal": "Thesis",
       "link": ""
+    },
+    {
+      "year": "2026",
+      "title": "Preliminary chemical analysis of latent Fingermarks developed with fire extinguisher dry powder by matrix-assisted laser desorption/ionization mass spectrometry imaging",
+      "authors": "Deejay Suen-yui Mak, Ming-yip Fung, Zhong-Ping Yao",
+      "journal": "Forensic Chemistry",
+      "link": "10.1016/j.forc.2026.100726"
+    },
+    {
+      "year": "2026",
+      "title": "Sequencing data-encoded peptides from tandem mass spectra",
+      "authors": "YAO Zhongping, Cheuk Chi NG, Francis Chung Ming LAU, Wai Man Tam",
+      "journal": "US Patent 12,700,478"
+    },
+    {
+      "title": "Tenfold expansion submicrometer MALDI mass spectrometry imaging of tissues and cultured cells",
+      "year": "2026",
+      "authors": "Chengyi Xie, Jianing Wang, Lei Guo, Xin Diao, Thomas Ka‐Yam Lam, Yanyan Chen, Ruxin Li, Yue Zhang, Xiaoxiao Wang, Jiacheng Fang, Zhongping Yao, Klaus Dreisewerd, Zongwei Cai",
+      "journal": "Angewandte Chemie",
+      "link": "https://doi.org/10.1002/ange.1256471Digital Object Identifier (DOI)"
+    },
+    {
+      "year": "2026",
+      "title": "Antibody-mediated allosteric effects and conserved vulnerabilities of SARS-CoV-2 spike protein revealed by hydrogen/deuterium exchange mass spectrometry",
+      "authors": "Qinyu Jia, Chengxi Liu, Chang Zhao, Zhong-Ping Yao",
+      "journal": "Acta Pharmaceutica Sinica B",
+      "link": "10.1016/j.apsb.2026.09.025"
+    },
+    {
+      "year": "2026",
+      "title": "Data storage with amino acid sequences",
+      "authors": "Yin Zhou, Cheuk Chi A Ng, Zhong-Ping Yao",
+      "journal": "Trends in Biotechnology",
+      "link": "DOI: 10.1016/j.tibtech.2026.09.021"
+    },
+    {
+      "year": "2026",
+      "title": "SARS-CoV-2 main protease inhibition through dimerization promotion by peptidomimetic inhibitors and disruption by ebselen",
+      "authors": "Chengxi Liu, Qinyu Jia, Chang Zhao, Zhong-Ping Yao",
+      "journal": "eLife",
+      "link": " https://doi.org/10.7554/eLife.109956.4"
     }
   ]
 }
